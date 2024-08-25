@@ -48,6 +48,10 @@ Route::get('/cases/readyfortravelling/', function () {
     return view('pages.readyfortravelling');
 })->name('readyfortravelling');
 
+Route::get('/cases/magazijnlade/', function () {
+    return view('pages.magazijnlade');
+})->name('magazijnlade');
+
 Route::get('/contact/', [ContactController::class, 'contact'])->name('contact');
 
 Route::post('/contact/', [ContactController::class, 'contactPost'])->name('contact.store');

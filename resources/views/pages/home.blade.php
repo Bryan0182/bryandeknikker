@@ -28,7 +28,7 @@
                 <div class="col-md-8 col-sm-12 align-items-center d-flex text-column">
                     <div class="row">
                         <div class="col-12 title">
-                            <h1>Bryan de Knikke</h1>
+                            <h1>Bryan de Knikker</h1>
                         </div>
                         <div class="col-lg-6 col-md-12 intro-text">
                             <p>Ben je benieuwd naar de grenzeloze mogelijkheden van code? Ik ben Bryan de Knikker, een

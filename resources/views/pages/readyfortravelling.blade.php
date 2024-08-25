@@ -25,7 +25,7 @@
 @endsection
 
 @section('logo-src')
-    {{ asset('/images/readyfortravelling.webp') }}
+    {{ asset('/images/readyfortravelling-logo.webp') }}
 @endsection
 
 @section('logo-alt')

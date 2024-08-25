@@ -24,7 +24,7 @@ lazyImages.forEach(image => {
 lightbox.option({
     'resizeDuration': 200,
     'wrapAround': true,
-    'disableScrolling': true // Hierdoor kan de pagina niet worden gescrold terwijl de afbeelding wordt weergegeven
+    'disableScrolling': true
 });
 
 $('.revealedBox').each(function(i){

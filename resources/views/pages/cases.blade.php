@@ -64,11 +64,21 @@
             </div>
             <div class="col-lg-3 col-md-6 col-sm-12 case-card">
                 <div class="card h-100">
-                    <img src="{{ asset('/images/readyfortravelling.webp') }}" class="card-img-top img-fluid" alt="Logo van Ready for Travelling">
+                    <img src="{{ asset('/images/readyfortravelling-logo.webp') }}" class="card-img-top img-fluid" alt="Logo van Ready for Travelling">
                     <div class="card-body d-flex flex-column">
                         <h5 class="card-title">Ready for Travelling</h5>
                         <p class="card-text">Bekijk hoe ik een bestaande website heb helpen verbeteren om nog betere informatie te bieden voor de bezoekers en de website een onvergetelijke reis te maken.</p>
                         <a href="{{ route('readyfortravelling') }}" class="btn btn-primary main-button mt-auto">Bekijk de case</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12 case-card">
+                <div class="card h-100">
+                    <img src="{{ asset('/images/magazijnlade-logo.webp') }}" class="card-img-top img-fluid" alt="Logo van Magazijnlade">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Magazijnlade</h5>
+                        <p class="card-text">Ontdek hoe ik de website van Magazijnlade.nl heb geoptimaliseerd om bezoekers nog beter te voorzien van waardevolle informatie over magazijnladen en de websitebeleving onvergetelijk te maken.</p>
+                        <a href="{{ route('magazijnlade') }}" class="btn btn-primary main-button mt-auto">Bekijk de case</a>
                     </div>
                 </div>
             </div>
