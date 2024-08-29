@@ -8,6 +8,10 @@
     <title>@yield('pageTitle', 'Bryan de Knikker') - Bryan de Knikker</title>
     <!-- Einde pagina titel -->
 
+    <!-- Begin favicon -->
+    <link rel="icon" type="image/x-icon" href="{{URL('/images/BK-favicon.svg')}}">
+    <!-- Einde favicon -->
+
     <!-- Begin Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
           crossorigin="anonymous">
@@ -15,6 +19,7 @@
 
     <!-- Begin eigen CSS -->
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+    @stack('styles')
     <!-- Einde eigen CSS -->
 </head>
 <body>
@@ -31,5 +36,10 @@
 <!-- Begin algemene footer -->
 @include('partials.footer')
 <!-- Einde algemene footer -->
+
+<!-- Begin Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        crossorigin="anonymous"></script>
+<!-- Einde Bootstrap JS -->
 </body>
 </html>

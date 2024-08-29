@@ -1,11 +1,41 @@
+/* Start root CSS */
 :root {
     --main-color: #656CCF;
     --second-color: #78CDAB;
     --white-color: #FFFFFF;
-    --grey-color: #F5F5F5;
+    --grey-color: #C8C8C8;
     --black-color: #000000;
+    --transparent-color: transparent;
 }
 
-.logo-image {
-    margin-right: 50px;
+@font-face {
+    font-family: 'Open Sans';
+    src: url('/public/fonts/open-sans/OpenSans-VariableFont_wdth,wght.ttf') format('ttf');
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
 }
+
+/* End root CSS */
+
+/* Start global CSS */
+
+/* Start body CSS */
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+}
+
+h1 {
+    font-size: 42px;
+    margin: 0;
+}
+
+p {
+    margin: 0;
+}
+
+/* End body CSS */
+
+/* End global CSS */
