@@ -19,4 +19,7 @@
         'height' => 300
     ])
     @endcomponent
+
+    @component('components.recent_blogs')
+    @endcomponent
 @endsection
