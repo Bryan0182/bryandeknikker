@@ -1,22 +1,29 @@
-<header class="p-3 text-bg-light">
+<header class="text-bg-light header">
     <div class="container">
-        <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-            <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none logo-image">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a href="/" class="navbar-brand d-flex align-items-center">
                 <img src="{{ asset('/images/BK-logo.svg') }}" width="100" height="65" alt="Logo van Bryan de Knikker">
             </a>
-
-            <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-                <li><a href="#" class="nav-link px-2 text-secondary">Home</a></li>
-                <li><a href="#" class="nav-link px-2 text-white">Features</a></li>
-                <li><a href="#" class="nav-link px-2 text-white">Pricing</a></li>
-                <li><a href="#" class="nav-link px-2 text-white">FAQs</a></li>
-                <li><a href="#" class="nav-link px-2 text-white">About</a></li>
-            </ul>
-
-            <div class="text-end">
-                <button type="button" class="btn btn-outline-light me-2">Login</button>
-                <button type="button" class="btn btn-warning">Sign-up</button>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav" style="width: fit-content;">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link text-dark">Over mij</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link text-dark">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link text-dark">Blog</a>
+                    </li>
+                </ul>
+                <div class="d-flex flex-column flex-lg-row buttons-row">
+                    <button type="button" class="btn btn-outline-dark cases-header-button me-0 me-lg-2 mb-2 mb-lg-0">Cases</button>
+                    <button type="button" class="btn btn-primary contact-header-button">Contact</button>
+                </div>
             </div>
-        </div>
+        </nav>
     </div>
 </header>
