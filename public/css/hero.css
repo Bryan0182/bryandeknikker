@@ -9,7 +9,7 @@
 }
 
 .contact-hero-button {
-    background: var(--transparent-color);
+    background-color: var(--transparent-color);
     color: var(--main-color);
     border: 1px solid var(--main-color);
     padding: 6px 12px !important;
@@ -17,14 +17,14 @@
     transition: ease-in-out 0.4s;
 }
 
-.contact-hero-button:hover {
-    background: var(--main-color);
-    color: var(--white-color);
-    border: 1px solid var(--main-color);
+.contact-hero-button:hover, .contact-hero-button:focus, .contact-hero-button:active {
+    background-color: var(--main-color) !important;
+    color: var(--white-color) !important;
+    border: 1px solid var(--main-color) !important;
 }
 
 .read-more-hero-button {
-    background: var(--transparent-color);
+    background-color: var(--transparent-color);
     color: var(--main-color);
     border: none;
     padding: 6px 12px !important;
@@ -33,9 +33,9 @@
     position: relative;
 }
 
-.read-more-hero-button:hover {
-    background: var(--transparent-color);
-    color: var(--main-color);
+.read-more-hero-button:hover, .read-more-hero-button:focus, .read-more-hero-button:active {
+    background-color: var(--transparent-color) !important;
+    color: var(--main-color) !important;
 }
 
 .read-more-hero-button::after {
@@ -50,6 +50,13 @@
 
 .read-more-hero-button:hover::after {
     transform: translateX(8px);
+}
+
+@media screen and (max-width: 768px) {
+    .button-hero-row {
+        display: flex !important;
+        width: fit-content;
+    }
 }
 
 /* End hero CSS */
