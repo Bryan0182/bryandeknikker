@@ -1,0 +1,47 @@
+/* Start blog detail CSS */
+
+.contact-blog-button {
+    background-color: var(--transparent-color);
+    color: var(--main-color);
+    border: 1px solid var(--main-color);
+    padding: 6px 12px !important;
+    border-radius: 5px;
+    transition: ease-in-out 0.4s;
+}
+
+.contact-blog-button:hover, .contact-blog-button:focus, .contact-blog-button:active {
+    background-color: var(--main-color) !important;
+    color: var(--white-color) !important;
+    border: 1px solid var(--main-color) !important;
+}
+
+.read-more-blog-button {
+    background-color: var(--transparent-color);
+    color: var(--main-color);
+    border: none;
+    padding: 6px 12px !important;
+    border-radius: 5px;
+    transition: ease-in-out 0.4s;
+    position: relative;
+}
+
+.read-more-blog-button:hover, .read-more-blog-button:focus, .read-more-blog-button:active {
+    background-color: var(--transparent-color) !important;
+    color: var(--main-color) !important;
+}
+
+.read-more-blog-button::after {
+    content: '';
+    background: url('/images/angle-right.svg') no-repeat;
+    width: 15px;
+    height: 24px;
+    display: inline-block;
+    margin-left: 5px;
+    transition: transform 0.4s ease-in-out;
+}
+
+.read-more-blog-button:hover::after {
+    transform: translateX(8px);
+}
+
+/* End blog detail CSS */

@@ -1,11 +1,32 @@
-<!-- resources/views/pages/blog_show.blade.php -->
-
 @extends('layouts.base')
 
 @section('title', $blog->title)
 
+@push('styles')
+    <link rel="stylesheet" href="{{ asset('css/header.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/blog_detail.css') }}">
+@endpush
+
 @section('content')
     <section class="blog-show py-5">
+        <div class="container hero-container col-12">
+            <div class="row align-items-center g-5 py-5 hero-row">
+                <div class="col-lg-6">
+                    <h1 class="fw-bold text-body-emphasis lh-1">{{ $blog->title }}</h1>
+                    <p class="description-paragraph">{{ $blog->intro_text }}</p>
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-start button-blog-row">
+                        <a href="" class="btn btn-outline-primary btn-lg px-4 me-md-2 contact-blog-button">Contact</a>
+                        <a href="{{ $blog->website_url }}" class="btn btn-primary align-items-center d-flex justify-content-center read-more-blog-button" target="_blank">Bezoek de website</a>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-8 col-lg-6">
+                    @if ($blog->logo_image)
+                        <img src="{{ Storage::url($blog->logo_image) }}" class="d-block mx-auto ms-md-auto me-md-0 img-fluid" alt="{{ $blog->title }}" width="300" height="300" loading="eager">
+                    @endif
+                </div>
+            </div>
+        </div>
+
         <div class="container">
             <h1 class="mb-4">{{ $blog->title }}</h1>
             @if ($blog->logo_image)
