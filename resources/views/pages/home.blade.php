@@ -5,6 +5,7 @@
 @push('styles')
     <link rel="stylesheet" href="{{ asset('css/header.css') }}">
     <link rel="stylesheet" href="{{ asset('css/hero.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/recent_blogs.css') }}">
 @endpush
 
 @section('content')
@@ -20,6 +21,5 @@
     ])
     @endcomponent
 
-    @component('components.recent_blogs')
-    @endcomponent
+    @include('components.recent_blogs', ['recentBlogs' => $recentBlogs])
 @endsection
