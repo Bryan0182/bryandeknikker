@@ -2,53 +2,96 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Support\Facades\File;
+use App\Models\Blog;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Str;
 
 class BlogController extends Controller
 {
-    public function showRecentBlogs()
+    public function store(Request $request)
     {
-        // Pad naar de blogs
-        $path = resource_path('views/blogs');
+        // Valideer de formulierinvoer
+        $validated = $request->validate([
+            'title' => 'required|string|max:255',
+            'intro_text' => 'required|string',
+            'website_url' => 'required|url',
+            'logo_image' => 'required|image|mimes:jpg,png,jpeg,gif,webp,svg|max:2048',
+            'fact1_title' => 'required|string|max:255',
+            'fact1_description' => 'required|string',
+            'fact2_title' => 'required|string|max:255',
+            'fact2_description' => 'required|string',
+            'fact3_title' => 'required|string|max:255',
+            'fact3_description' => 'required|string',
+            'challenge_title' => 'required|string|max:255',
+            'challenge_description' => 'required|string',
+            'approach_title' => 'required|string|max:255',
+            'approach_description' => 'required|string',
+            'slider_images.*' => 'nullable|image|mimes:jpg,png,jpeg,gif,webp,svg|max:2048',
+            'results_title' => 'required|string|max:255',
+            'results_description' => 'required|string',
+        ]);
 
-        // Verkrijg alle bestanden in de blogs map
-        $files = File::allFiles($path);
+        // Sla logo afbeelding op
+        if ($request->hasFile('logo_image')) {
+            $logoImagePath = $request->file('logo_image')->store('logos', 'public');
+        } else {
+            $logoImagePath = null;
+        }
 
-        // Debug de bestandsnamen
-        dd($files);
-
-        $blogs = [];
-        foreach ($files as $file) {
-            // Lees de inhoud van het bestand
-            $content = File::get($file);
-
-            // Debug de inhoud van het bestand
-            // dd($content);
-
-            // Haal de publicatiedatum op met regex
-            preg_match('/Gepubliceerd op (\d{4}-\d{2}-\d{2})/', $content, $matches);
-
-            // Als de datum gevonden is, voeg de blog toe aan de lijst
-            if (isset($matches[1])) {
-                $blogs[] = [
-                    'path' => $file->getRelativePathname(),
-                    'date' => $matches[1],
-                ];
+        // Sla slider afbeeldingen op
+        $sliderImagesPaths = [];
+        if ($request->hasFile('slider_images')) {
+            foreach ($request->file('slider_images') as $image) {
+                $sliderImagesPaths[] = $image->store('sliders', 'public');
             }
         }
 
-        // Debug de verzamelde blogs
-        // dd($blogs);
+        // Maak een nieuwe blog aan
+        $blog = Blog::create([
+            'title' => $validated['title'],
+            'intro_text' => $validated['intro_text'],
+            'website_url' => $validated['website_url'],
+            'logo_image' => $logoImagePath,
+            'fact1_title' => $validated['fact1_title'],
+            'fact1_description' => $validated['fact1_description'],
+            'fact2_title' => $validated['fact2_title'],
+            'fact2_description' => $validated['fact2_description'],
+            'fact3_title' => $validated['fact3_title'],
+            'fact3_description' => $validated['fact3_description'],
+            'challenge_title' => $validated['challenge_title'],
+            'challenge_description' => $validated['challenge_description'],
+            'approach_title' => $validated['approach_title'],
+            'approach_description' => $validated['approach_description'],
+            'slider_images' => json_encode($sliderImagesPaths),
+            'results_title' => $validated['results_title'],
+            'results_description' => $validated['results_description'],
+        ]);
 
-        // Sorteer blogs op datum (meest recent eerst)
-        usort($blogs, function($a, $b) {
-            return strtotime($b['date']) - strtotime($a['date']);
-        });
+        // Redirect naar de success pagina met een succesmelding
+        return redirect()->route('blogs.success')->with('success', 'Blog succesvol aangemaakt!');
+    }
 
-        // Neem de 3 recentste blogs
-        $recentBlogs = array_slice($blogs, 0, 3);
+    public function success()
+    {
+        return view('pages.blog_success');
+    }
 
-        // Return de view met de recente blogs
-        return view('components.recent_blogs', ['recentBlogs' => $recentBlogs]);
+    public function showRecentBlogs()
+    {
+        // Verkrijg de 3 meest recente blogs
+        $recentBlogs = Blog::orderBy('created_at', 'desc')->limit(3)->get();
+
+        return view('pages.recent_blogs', ['recentBlogs' => $recentBlogs]);
+    }
+
+    public function show($slug)
+    {
+        $blog = Blog::where('slug', $slug)->firstOrFail();
+
+        // Decodeer de slider_images als deze een JSON-string is
+        $blog->slider_images = json_decode($blog->slider_images, true);
+
+        return view('pages.blog_show', ['blog' => $blog]);
     }
 }
