@@ -92,6 +92,6 @@ class BlogController extends Controller
         // Decodeer de slider_images als deze een JSON-string is
         $blog->slider_images = json_decode($blog->slider_images, true);
 
-        return view('pages.blog_show', ['blog' => $blog]);
+        return view('pages.blog_detail', ['blog' => $blog]);
     }
 }
