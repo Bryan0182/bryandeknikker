@@ -1,5 +1,9 @@
 /* Start blog detail CSS */
 
+p.description-paragraph {
+    padding: 15px 0;
+}
+
 .contact-blog-button {
     background-color: var(--transparent-color);
     color: var(--main-color);
@@ -23,6 +27,7 @@
     border-radius: 5px;
     transition: ease-in-out 0.4s;
     position: relative;
+    font-size: 20px;
 }
 
 .read-more-blog-button:hover, .read-more-blog-button:focus, .read-more-blog-button:active {
@@ -42,6 +47,44 @@
 
 .read-more-blog-button:hover::after {
     transform: translateX(8px);
+}
+
+.blog-detail-facts-container-fluid {
+    background: var(--grey-color);
+    padding-top: 5rem;
+    padding-bottom: 3rem;
+}
+
+.blog-detail-facts-card-number {
+    height: 60px;
+    width: 60px;
+    padding: 10px !important;
+    background-color: var(--main-color) !important;
+}
+
+.blog-detail-facts-card {
+    background: none;
+    border: 1px solid var(--black-color)
+}
+
+.blog-detail-facts-card.left{
+    box-shadow: -4px 4px 4px 0 rgba(0, 0, 0, 0.15);
+}
+
+.blog-detail-facts-card.middle{
+    box-shadow: 4px 4px 4px 0 rgba(0, 0, 0, 0.15), -4px 4px 4px 0 rgba(0, 0, 0, 0.15);
+}
+
+.blog-detail-facts-card.right{
+    box-shadow: 4px 4px 4px 0 rgba(0, 0, 0, 0.15);
+}
+.blog-detail-card-title {
+    padding-top: 30px;
+    margin: 0 !important;
+}
+
+.blog-detail-card-text {
+    padding: 15px 0;
 }
 
 /* End blog detail CSS */
