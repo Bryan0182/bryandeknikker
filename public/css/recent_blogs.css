@@ -38,6 +38,7 @@
     border-radius: 5px;
     transition: ease-in-out 0.4s;
     position: relative;
+    font-size: 20px;
 }
 
 .read-more-recent-blogs-button:hover, .read-more-recent-blogs-button:focus, .read-more-recent-blogs-button:active {

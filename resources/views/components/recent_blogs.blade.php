@@ -16,7 +16,7 @@
                             <div class="card-body">
                                 <h4 class="card-title">{{ $blog->title }}</h4>
                                 <p class="card-text">{{ $blog->intro_text }}</p>
-                                <a href="{{ route('blogs.show', ['slug' => $blog->slug]) }}" class="btn btn-primary align-items-center d-flex justify-content-center read-more-recent-blogs-button" target="_blank">Lees meer</a>
+                                <a href="{{ route('blogs.show', ['slug' => $blog->slug]) }}" class="btn btn-primary align-items-center d-flex justify-content-center read-more-recent-blogs-button">Lees meer</a>
                             </div>
                         </div>
                     </div>
