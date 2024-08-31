@@ -17,6 +17,11 @@
           crossorigin="anonymous">
     <!-- Einde Bootstrap CSS -->
 
+    <!-- Begin Slick Slider CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick-theme.css"/>
+    <!-- Einde Slick Slider CSS -->
+
     <!-- Begin eigen CSS -->
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     @stack('styles')
@@ -41,5 +46,18 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         crossorigin="anonymous"></script>
 <!-- Einde Bootstrap JS -->
+
+<!-- Begin jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<!-- Einde jQuery -->
+
+<!-- Begin Slick Slider JS -->
+<script src="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.min.js"></script>
+<!-- Einde Slick Slider JS -->
+
+<!-- Begin eigen JS -->
+<script src="{{ asset('js/app.js') }}"></script>
+@stack('scripts')
+<!-- Einde eigen JS -->
 </body>
 </html>
