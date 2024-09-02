@@ -15,7 +15,8 @@
                     <h1 class="fw-bold text-body-emphasis lh-1">{{ $blog->title }}</h1>
                     <p class="description-paragraph">{{ $blog->intro_text }}</p>
                     <div class="d-grid gap-2 d-md-flex justify-content-md-start button-blog-row">
-                        <a href="{{-- {{ route('contact') }} --}}" class="btn btn-outline-primary btn-lg px-4 me-md-2 contact-blog-button">Contact</a>
+                        <a href="{{-- {{ route('contact') }} --}}"
+                           class="btn btn-outline-primary btn-lg px-4 me-md-2 contact-blog-button">Contact</a>
                         <a href="{{ $blog->website_url }}"
                            class="btn btn-primary align-items-center d-flex justify-content-center read-more-blog-button"
                            target="_blank">Bezoek de website</a>
@@ -121,6 +122,19 @@
                 <div class="col-12">
                     <h2>{{ $blog->results_title }}</h2>
                     <p>{{ $blog->results_description }}</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid blog-detail-cta-container-fluid">
+            <div class="container blog-detail-cta-section">
+                <div class="row text-center g-5 py-5">
+                    <div class="col-12">
+                        <h2 class="blog-detail-cta-title">Benieuwd wat ik voor jou kan betekenen?</h2>
+                        <p class="blog-detail-cta-text">Neem nu contact op</p>
+                        <a href="{{-- {{ route('contact') }} --}}"
+                           class="btn btn-primary contact-blog-button">Contact</a>
+                    </div>
                 </div>
             </div>
         </div>
