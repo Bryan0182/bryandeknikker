@@ -97,6 +97,10 @@ p.description-paragraph {
     position: relative;
 }
 
+.slick-slide img {
+    border-radius: 5px;
+}
+
 .slick-next:before {
     content: '';
     background: url(/images/angle-right.svg) no-repeat;
