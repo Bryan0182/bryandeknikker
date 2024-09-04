@@ -1,0 +1,50 @@
+.skills-container-fluid {
+    background: var(--grey-color);
+}
+
+.skills-icon {
+    background: var(--main-color);
+    width: fit-content;
+    padding: 10px;
+    border-radius: 100%;
+    margin: auto;
+}
+
+.skills-title {
+    padding: 15px 0;
+    margin: 0;
+    font-weight: bold;
+}
+
+.skills-subtitle {
+    padding: 15px 0;
+    margin: 0;
+    font-size: 24px;
+}
+
+ul.list-unstyled {
+    border: 1px solid var(--black-color);
+    padding: 30px;
+    border-radius: 5px;
+}
+
+.icon-circle {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: var(--white-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.icon-circle img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+span.language-framework-name {
+    font-size: 18px;
+}
