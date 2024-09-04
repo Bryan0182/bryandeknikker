@@ -13,7 +13,7 @@
                     <div class="col-10 d-inline-block">
                         <ul class="list-unstyled">
                             @foreach ($frontend['languages'] as $language)
-                                <li class="d-flex align-items-center mb-3">
+                                <li class="d-flex align-items-center mb-3 skills-item">
                                     <div class="icon-circle me-3">
                                         <img src="{{ asset('images/' . $language['icon']) }}"
                                              alt="{{ $language['name'] }}" width="35" height="40">
@@ -28,7 +28,7 @@
                     <div class="col-10 d-inline-block">
                         <ul class="list-unstyled">
                             @foreach ($frontend['frameworks'] as $framework)
-                                <li class="d-flex align-items-center mb-3">
+                                <li class="d-flex align-items-center mb-3 skills-item">
                                     <div class="icon-circle me-3">
                                         <img src="{{ asset('images/' . $framework['icon']) }}"
                                              alt="{{ $framework['name'] }}" width="35" height="40">
@@ -53,7 +53,7 @@
                     <div class="col-10 d-inline-block">
                         <ul class="list-unstyled">
                             @foreach ($backend['languages'] as $language)
-                                <li class="d-flex align-items-center mb-3">
+                                <li class="d-flex align-items-center mb-3 skills-item">
                                     <div class="icon-circle me-3">
                                         <img src="{{ asset('images/' . $language['icon']) }}"
                                              alt="{{ $language['name'] }}" width="35" height="40">
@@ -68,7 +68,7 @@
                     <div class="col-10 d-inline-block">
                         <ul class="list-unstyled">
                             @foreach ($backend['frameworks'] as $framework)
-                                <li class="d-flex align-items-center mb-3">
+                                <li class="d-flex align-items-center mb-3 skills-item">
                                     <div class="icon-circle me-3">
                                         <img src="{{ asset('images/' . $framework['icon']) }}"
                                              alt="{{ $framework['name'] }}" width="35" height="40">
