@@ -1,10 +1,10 @@
 <!-- resources/views/components/recent-blogs.blade.php -->
 <section class="recent-blogs py-5">
     <div class="container">
-        <h1 class="mb-4 text-center">Recente blogs</h1>
+        <h1 class="mb-4 text-center">Recente cases</h1>
 
         @if ($recentBlogs->isEmpty())
-            <p>Er zijn momenteel geen recente blogs beschikbaar.</p>
+            <p>Er zijn momenteel geen recente cases beschikbaar.</p>
         @else
             <div class="row justify-content-between">
                 @foreach ($recentBlogs as $index => $blog)

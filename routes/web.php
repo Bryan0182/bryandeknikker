@@ -6,14 +6,14 @@ use App\Http\Controllers\BlogController;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
-Route::get('/blogs/create', function () {
+Route::get('/cases/create', function () {
     return view('pages.blog_create');
 })->name('blogs.create');
 
-Route::get('/blogs/success', [BlogController::class, 'success'])->name('blogs.success');
+Route::get('/cases/success', [BlogController::class, 'success'])->name('blogs.success');
 
-Route::post('/blogs', [BlogController::class, 'store'])->name('blogs.store');
+Route::post('/cases', [BlogController::class, 'store'])->name('blogs.store');
 
 Route::get('/recent-blogs', [BlogController::class, 'showRecentBlogs'])->name('blogs.recent');
 
-Route::get('/blogs/{slug}', [BlogController::class, 'show'])->name('blogs.show');
+Route::get('/cases/{slug}', [BlogController::class, 'show'])->name('blogs.show');
