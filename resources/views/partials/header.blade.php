@@ -15,9 +15,6 @@
                     <li class="nav-item">
                         <a href="#" class="nav-link text-dark">Skills</a>
                     </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link text-dark">Blog</a>
-                    </li>
                 </ul>
                 <div class="d-flex flex-column flex-lg-row buttons-row">
                     <button type="button" class="btn btn-outline-dark cases-header-button me-0 me-lg-2 mb-2 mb-lg-0">Cases</button>
