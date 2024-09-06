@@ -54,4 +54,21 @@
         ]
     ])
     @endcomponent
+
+    @component('components.text', [
+        'title' => 'Mijn passie voor software development',
+        'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+    ])
+    @endcomponent
+
+    @component('components.cta', [
+        'title' => 'Ontdek mijn portfolio',
+        'description' => 'Ontdek mijn portfolio cases en zie mijn ontwikkelvaardigheden in actie',
+        'first_button' => 'Cases',
+        'first_button_url' => '',
+        'second_button' => 'Bekijk mijn laatste case',
+        'second_button_url' => ''
+    ])
+    @endcomponent
+
 @endsection
