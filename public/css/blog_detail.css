@@ -11,6 +11,7 @@ p.description-paragraph {
     padding: 6px 12px !important;
     border-radius: 5px;
     transition: ease-in-out 0.4s;
+    font-size: 20px;
 }
 
 .contact-blog-button:hover, .contact-blog-button:focus, .contact-blog-button:active {
