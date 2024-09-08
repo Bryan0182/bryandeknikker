@@ -5,41 +5,41 @@
                 <a href="/" class="footer-brand d-flex align-items-center mb-3">
                     <img src="{{ asset('/images/BK-logo.svg') }}" width="100" height="65" alt="Logo van Bryan de Knikker">
                 </a>
-                <form>
-                    <h5>Subscribe to our newsletter</h5>
-                    <p>Monthly digest of what's new and exciting from us.</p>
-                    <div class="d-flex flex-column flex-sm-row w-100 gap-2">
-                        <label for="newsletter1" class="visually-hidden">Email address</label>
-                        <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
-                        <button class="btn btn-primary" type="button">Subscribe</button>
+                <form autocomplete="off">
+                    <p>Blijf op de hoogte van nieuwe cases door je aan te melden voor mijn nieuwsbrief.</p>
+                    <div class="d-flex flex-column flex-sm-row w-100 gap-2 mt-3 mb-3">
+                        <label for="newsletter1" class="visually-hidden">E-mailadres</label>
+                        <input id="newsletter1" type="text" class="form-control newsletter-subscription-form" placeholder="E-mailadres">
+                        <button class="btn btn-primary newsletter-subscription-button" type="button">Abonneren</button>
                     </div>
+                    <span>Door te abonneren, ga je akkoord met ons privacybeleid en geef je toestemming om updates van mij te ontvangen.</span>
                 </form>
             </div>
 
             <div class="col-12 col-md-3 offset-md-2 mb-3">
-                <h5>Heb je dit al gezien?</h5>
+                <h5 class="mb-5">Heb je dit al gezien?</h5>
                 <ul class="nav flex-column">
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Over mij</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Skills</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Cases</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Contact</a></li>
                 </ul>
             </div>
 
             <div class="col-12 col-md-2 mb-3">
-                <h5>Volg mij</h5>
+                <h5 class="mb-5">Volg mij</h5>
                 <ul class="nav flex-column">
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
+                    <li class="nav-item mb-2">
+                        <a href="https://www.linkedin.com/in/bryan-de-knikker/" class="nav-link p-0 text-body-secondary" target="_blank">
+                            <img src="images/linkedin-logo.svg" alt="LinkedIn Logo" style="width: 16px; height: 16px; margin-right: 5px;">
+                            LinkedIn
+                        </a>
+                    </li>
                 </ul>
             </div>
         </div>
 
-        <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+        <div class="d-flex flex-column flex-sm-row justify-content-between pt-4 border-top">
             <p>© <?php echo date("Y");?> Bryan de Knikker. Alle rechten voorbehouden</p>
             <ul class="nav col-md-4 justify-content-end">
                 <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Privacyverklaring</a></li>
