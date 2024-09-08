@@ -31,7 +31,7 @@
                 <ul class="nav flex-column">
                     <li class="nav-item mb-2">
                         <a href="https://www.linkedin.com/in/bryan-de-knikker/" class="nav-link p-0 text-body-secondary" target="_blank">
-                            <img src="images/linkedin-logo.svg" alt="LinkedIn Logo" style="width: 16px; height: 16px; margin-right: 5px;">
+                            <img src="/images/linkedin-logo.svg" alt="LinkedIn Logo" style="width: 16px; height: 16px; margin-right: 5px;">
                             LinkedIn
                         </a>
                     </li>
