@@ -1,7 +1,7 @@
 /* Start header CSS */
 
 .header {
-    background-color: var(--white-color);
+    background-color: var(--white-color) !important;
     border-bottom: 1px solid var(--black-color);
 }
 
