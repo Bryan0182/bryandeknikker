@@ -57,6 +57,10 @@
         display: flex !important;
         width: fit-content;
     }
+
+    .mt-tablet {
+        margin-top: 3rem !important; /* Pas 3rem aan naar de gewenste waarde */
+    }
 }
 
 /* End hero CSS */
