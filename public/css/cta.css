@@ -1,0 +1,16 @@
+/* Start CTA CSS */
+
+.cta-container-fluid {
+    border-top: 1px solid var(--black-color);
+    border-bottom: 1px solid var(--black-color);
+}
+
+.cta-title {
+    margin: 0;
+}
+
+.cta-text {
+    padding: 15px 0;
+}
+
+/* End CTA CSS */
