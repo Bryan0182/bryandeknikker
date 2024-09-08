@@ -5,6 +5,7 @@
 @push('styles')
     <link rel="stylesheet" href="{{ asset('css/header.css') }}">
     <link rel="stylesheet" href="{{ asset('css/blog_detail.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/footer.css') }}">
 @endpush
 
 @section('content')
@@ -106,7 +107,11 @@
                 <div class="col-12">
                     <!-- Begin slider -->
                     <div class="blog-detail-slider-images">
-                        @foreach (json_decode($blog->slider_images) as $image)
+                        @php
+                            $sliderImages = is_string($blog->slider_images) ? json_decode($blog->slider_images) : $blog->slider_images;
+                        @endphp
+
+                        @foreach ($sliderImages as $image)
                             <div>
                                 <img src="{{ Storage::url($image) }}" alt="Slider Image" class="img-fluid"/>
                             </div>
