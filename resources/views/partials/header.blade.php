@@ -1,6 +1,6 @@
 <header class="text-bg-light header">
     <div class="container">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <nav class="navbar navbar-expand-lg navbar-light">
             <a href="/" class="navbar-brand d-flex align-items-center">
                 <img src="{{ asset('/images/BK-logo.svg') }}" width="100" height="65" alt="Logo van Bryan de Knikker">
             </a>
