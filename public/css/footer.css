@@ -4,4 +4,21 @@
     width: fit-content;
 }
 
+.newsletter-subscription-form {
+    border: 1px solid var(--main-color);
+}
+
+.newsletter-subscription-button {
+    background: transparent;
+    border: 1px solid var(--main-color);
+    color: var(--black-color);
+    transition: ease-in-out 0.4s;
+}
+
+.newsletter-subscription-button:hover, .newsletter-subscription-button:focus, .newsletter-subscription-button:active {
+    background-color: var(--main-color) !important;
+    color: var(--white-color) !important;
+    border: 1px solid var(--main-color) !important;
+}
+
 /* End footer CSS */
