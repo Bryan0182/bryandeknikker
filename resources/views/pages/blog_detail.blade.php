@@ -51,17 +51,17 @@
         ])
         @endcomponent
 
-        @component('components.text', [
-            'title' => $blog->approach_title,
-            'description' => $blog->approach_description
-        ])
-        @endcomponent
-
         @php
             $sliderImages = is_string($blog->slider_images) ? json_decode($blog->slider_images) : $blog->slider_images;
         @endphp
         @component('components.slider', [
             'images' => $sliderImages
+        ])
+        @endcomponent
+
+        @component('components.text', [
+            'title' => $blog->approach_title,
+            'description' => $blog->approach_description
         ])
         @endcomponent
 
