@@ -1,0 +1,42 @@
+/* Start Fact CSS */
+
+.fact-container-fluid {
+    background: var(--grey-color);
+    padding-top: 5rem;
+    padding-bottom: 3rem;
+}
+
+.fact-card-number {
+    height: 60px;
+    width: 60px;
+    padding: 10px !important;
+    background-color: var(--main-color) !important;
+}
+
+.fact-card {
+    background: none;
+    border: 1px solid var(--black-color)
+}
+
+.fact-card.left{
+    box-shadow: -4px 4px 4px 0 rgba(0, 0, 0, 0.15);
+}
+
+.fact-card.middle{
+    box-shadow: 4px 4px 4px 0 rgba(0, 0, 0, 0.15), -4px 4px 4px 0 rgba(0, 0, 0, 0.15);
+}
+
+.fact-card.right{
+    box-shadow: 4px 4px 4px 0 rgba(0, 0, 0, 0.15);
+}
+
+fact-card-title {
+    padding-top: 30px;
+    margin: 0 !important;
+}
+
+.fact-card-text {
+    padding: 15px 0;
+}
+
+/* End Fact CSS */
