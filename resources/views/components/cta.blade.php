@@ -7,8 +7,11 @@
                 <div class="d-grid gap-2 d-md-flex justify-content-center button-cta-row">
                     <a href="{{ $first_button_url }}"
                        class="btn btn-outline-primary btn-lg px-4 me-md-2 contact-hero-button">{{ $first_button }}</a>
-                    <a href="{{ $second_button_url }}"
-                       class="btn btn-primary btn-lg px-4 align-items-center d-flex read-more-hero-button">{{ $second_button }}</a>
+
+                    @if(!empty($second_button))
+                        <a href="{{ $second_button_url }}"
+                           class="btn btn-primary btn-lg px-4 align-items-center d-flex read-more-hero-button">{{ $second_button }}</a>
+                    @endif
                 </div>
             </div>
         </div>
