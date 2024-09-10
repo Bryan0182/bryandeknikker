@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="{{ asset('css/hero.css') }}">
     <link rel="stylesheet" href="{{ asset('css/recent_blogs.css') }}">
     <link rel="stylesheet" href="{{ asset('css/skills.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/text.css') }}">
     <link rel="stylesheet" href="{{ asset('css/cta.css') }}">
     <link rel="stylesheet" href="{{ asset('css/footer.css') }}">
 @endpush
