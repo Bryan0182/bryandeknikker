@@ -9,10 +9,10 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav" style="width: fit-content;">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item align-items-center d-flex">
+                    <li class="nav-item nav-item-header align-items-center d-flex">
                         <a href="#" class="nav-link text-dark">Over mij</a>
                     </li>
-                    <li class="nav-item align-items-center d-flex">
+                    <li class="nav-item nav-item-header align-items-center d-flex">
                         <a href="#" class="nav-link text-dark">Skills</a>
                     </li>
                 </ul>
