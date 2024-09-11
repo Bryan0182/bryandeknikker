@@ -21,4 +21,8 @@
     border: 1px solid var(--main-color) !important;
 }
 
+.nav-item-declaration {
+    padding: 0 15px;
+}
+
 /* End footer CSS */
