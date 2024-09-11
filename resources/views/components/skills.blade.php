@@ -1,8 +1,8 @@
 <div class="skills-container-fluid">
     <div class="container skills-section py-5 col-12">
-        <div class="row">
+        <div class="row justify-content-center">
             <!-- Frontend Development -->
-            <div class="col-lg-4 offset-lg-1">
+            <div class="col-lg-4">
                 <div class="text-center mb-4">
                     <div class="skills-icon">
                         <img src="{{ asset('images/brackets-code-white.svg') }}" alt="Frontend Development" width="45"
@@ -48,7 +48,7 @@
             </div>
 
             <!-- Backend Development -->
-            <div class="col-lg-4 offset-lg-1">
+            <div class="col-lg-4">
                 <div class="text-center mb-4">
                     <div class="skills-icon">
                         <img src="{{ asset('images/brackets-curly-code-white.svg') }}" alt="Backend Development"
