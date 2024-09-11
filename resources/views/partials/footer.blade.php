@@ -17,7 +17,7 @@
             </div>
 
             <div class="col-12 col-md-3 offset-md-2 mb-3">
-                <h5 class="mb-5">Heb je dit al gezien?</h5>
+                <h5 class="mb-2 mb-md-5">Heb je dit al gezien?</h5>
                 <ul class="nav flex-column">
                     <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Over mij</a></li>
                     <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Skills</a></li>
@@ -27,7 +27,7 @@
             </div>
 
             <div class="col-12 col-md-2 mb-3">
-                <h5 class="mb-5">Volg mij</h5>
+                <h5 class="mb-2 mb-md-5">Volg mij</h5>
                 <ul class="nav flex-column">
                     <li class="nav-item mb-2">
                         <a href="https://www.linkedin.com/in/bryan-de-knikker/" class="nav-link p-0 text-body-secondary" target="_blank">
@@ -39,11 +39,11 @@
             </div>
         </div>
 
-        <div class="d-flex flex-column flex-sm-row justify-content-between pt-4 border-top">
-            <p>© <?php echo date("Y");?> Bryan de Knikker. Alle rechten voorbehouden</p>
-            <ul class="nav col-md-4 justify-content-end">
-                <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Privacyverklaring</a></li>
-                <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Cookieverklaring</a></li>
+        <div class="footer d-flex flex-column flex-md-row justify-content-between align-items-center pt-4 border-top">
+            <p class="mb-2 mb-md-0 text-center text-md-start">© <?php echo date("Y"); ?> Bryan de Knikker. Alle rechten voorbehouden</p>
+            <ul class="nav justify-content-center justify-content-md-end">
+                <li class="nav-item nav-item-declaration"><a href="#" class="nav-link px-2 text-body-secondary">Privacyverklaring</a></li>
+                <li class="nav-item nav-item-declaration"><a href="#" class="nav-link px-2 text-body-secondary">Cookieverklaring</a></li>
             </ul>
         </div>
     </footer>
