@@ -1,12 +1,31 @@
 /* Start header CSS */
 
 .header {
-    background-color: var(--white-color) !important;
     border-bottom: 1px solid var(--black-color);
+}
+
+body.dark-theme .header {
+    border-bottom: 1px solid var(--white-color);
 }
 
 .logo-image {
     margin-right: 50px;
+}
+
+.logo-dark {
+    display: none;
+}
+
+body.dark-theme .logo-light {
+    display: none;
+}
+
+body.dark-theme .logo-dark {
+    display: block;
+}
+
+body.dark-theme .nav-link {
+    color: var(--white-color) !important;
 }
 
 .cases-header-button {
