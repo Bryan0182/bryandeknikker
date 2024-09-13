@@ -11,6 +11,15 @@ body.dark-theme {
         display: block;
     }
 
+    .newsletter-subscription-form {
+        background: var(--black-color);
+        color: var(--white-color);
+
+        &::placeholder {
+            color: var(--white-color);
+        }
+    }
+
     .newsletter-subscription-button {
         color: var(--white-color);
     }
