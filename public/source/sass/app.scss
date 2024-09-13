@@ -36,6 +36,7 @@ body {
     color: $font-color-dark;
     transition: background-color $transition-time, color $transition-time;
 
+    // Handmatige dark mode class
     &.dark-theme {
         background-color: $font-color-dark;
         color: $font-color-light;
