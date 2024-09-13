@@ -18,5 +18,10 @@
   "bugs": {
     "url": "https://github.com/Bryan0182/bryandeknikker/issues"
   },
-  "homepage": "https://github.com/Bryan0182/bryandeknikker#readme"
+  "homepage": "https://github.com/Bryan0182/bryandeknikker#readme",
+  "devDependencies": {
+    "laravel-mix": "^6.0.49",
+    "sass": "^1.78.0",
+    "sass-loader": "^12.6.0"
+  }
 }
