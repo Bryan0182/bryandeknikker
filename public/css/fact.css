@@ -4,6 +4,11 @@
     background: var(--grey-color);
     padding-top: 5rem;
     padding-bottom: 3rem;
+    transition: background 0.3s, color 0.3s;
+}
+
+body.dark-theme .fact-container-fluid {
+    background: var(--black-color);
 }
 
 .fact-card-number {
@@ -18,25 +23,49 @@
     border: 1px solid var(--black-color)
 }
 
+body.dark-theme .fact-card {
+    border: 1px solid var(--white-color);
+}
+
 .fact-card.left{
     box-shadow: -4px 4px 4px 0 rgba(0, 0, 0, 0.15);
+}
+
+body.dark-theme .fact-card.left{
+    box-shadow: -4px 4px 4px 0 rgba(255, 255, 255, 0.15);
 }
 
 .fact-card.middle{
     box-shadow: 4px 4px 4px 0 rgba(0, 0, 0, 0.15), -4px 4px 4px 0 rgba(0, 0, 0, 0.15);
 }
 
+body.dark-theme .fact-card.middle{
+    box-shadow: 4px 4px 4px 0 rgba(255, 255, 255, 0.15), -4px 4px 4px 0 rgba(255, 255, 255, 0.15);
+}
+
 .fact-card.right{
     box-shadow: 4px 4px 4px 0 rgba(0, 0, 0, 0.15);
 }
 
-fact-card-title {
+body.dark-theme .fact-card.right{
+    box-shadow: 4px 4px 4px 0 rgba(255, 255, 255, 0.15);
+}
+
+.fact-card-title {
     padding-top: 30px;
     margin: 0 !important;
 }
 
+body.dark-theme .fact-card-title {
+    color: var(--white-color);
+}
+
 .fact-card-text {
     padding: 15px 0;
+}
+
+body.dark-theme .fact-card-text {
+    color: var(--white-color);
 }
 
 /* End Fact CSS */

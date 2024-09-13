@@ -3,13 +3,13 @@
 @section('title', 'Home')
 
 @push('styles')
-    <link rel="stylesheet" href="{{ asset('css/header.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/hero.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/recent_blogs.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/skills.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/text.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/cta.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/footer.css') }}">
+    <link rel="stylesheet" href="{{ asset('/output/css/header.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('/output/css/hero.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('/output/css/recent_cases.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('/output/css/skills.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('/output/css/text.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('/output/css/cta.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('/output/css/footer.min.css') }}">
 @endpush
 
 @section('content')
@@ -20,7 +20,7 @@
         'first_button_url' => '',
         'second_button' => 'Lees meer',
         'second_button_url' => '',
-        'imageSrc' => asset('/images/blob-profielfoto-transparent.png'),
+        'imageSrc' => asset('/output/images/blob-profielfoto-transparent.png'),
         'altText' => 'Foto van Bryan de Knikker',
         'width' => 300,
         'height' => 300

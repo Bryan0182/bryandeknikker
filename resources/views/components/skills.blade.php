@@ -5,7 +5,7 @@
             <div class="col-lg-4">
                 <div class="text-center mb-4">
                     <div class="skills-icon">
-                        <img src="{{ asset('images/brackets-code-white.svg') }}" alt="Frontend Development" width="45"
+                        <img src="{{ asset('output/images/brackets-code-white.svg') }}" alt="Frontend Development" width="45"
                              height="45">
                     </div>
                     <h2 class="skills-title">Frontend Development</h2>
@@ -17,7 +17,7 @@
                                     @foreach ($frontend['languages'] as $language)
                                         <li class="d-flex align-items-center mb-3 skills-item">
                                             <div class="icon-circle me-3">
-                                                <img src="{{ asset('images/' . $language['icon']) }}"
+                                                <img src="{{ asset('output/images/' . $language['icon']) }}"
                                                      alt="{{ $language['name'] }}" width="35" height="40">
                                             </div>
                                             <span class="language-framework-name">{{ $language['name'] }}</span>
@@ -34,7 +34,7 @@
                                     @foreach ($frontend['frameworks'] as $framework)
                                         <li class="d-flex align-items-center mb-3 skills-item">
                                             <div class="icon-circle me-3">
-                                                <img src="{{ asset('images/' . $framework['icon']) }}"
+                                                <img src="{{ asset('output/images/' . $framework['icon']) }}"
                                                      alt="{{ $framework['name'] }}" width="35" height="40">
                                             </div>
                                             <span class="language-framework-name">{{ $framework['name'] }}</span>
@@ -51,7 +51,7 @@
             <div class="col-lg-4">
                 <div class="text-center mb-4">
                     <div class="skills-icon">
-                        <img src="{{ asset('images/brackets-curly-code-white.svg') }}" alt="Backend Development"
+                        <img src="{{ asset('output/images/brackets-curly-code-white.svg') }}" alt="Backend Development"
                              width="45" height="45">
                     </div>
                     <h2 class="skills-title">Backend Development</h2>
@@ -63,7 +63,7 @@
                                     @foreach ($backend['languages'] as $language)
                                         <li class="d-flex align-items-center mb-3 skills-item">
                                             <div class="icon-circle me-3">
-                                                <img src="{{ asset('images/' . $language['icon']) }}"
+                                                <img src="{{ asset('output/images/' . $language['icon']) }}"
                                                      alt="{{ $language['name'] }}" width="35" height="40">
                                             </div>
                                             <span class="language-framework-name">{{ $language['name'] }}</span>
@@ -79,7 +79,7 @@
                                     @foreach ($backend['frameworks'] as $framework)
                                         <li class="d-flex align-items-center mb-3 skills-item">
                                             <div class="icon-circle me-3">
-                                                <img src="{{ asset('images/' . $framework['icon']) }}"
+                                                <img src="{{ asset('output/images/' . $framework['icon']) }}"
                                                      alt="{{ $framework['name'] }}" width="35" height="40">
                                             </div>
                                             <span class="language-framework-name">{{ $framework['name'] }}</span>

@@ -1,4 +1,4 @@
-/* Start root CSS */
+/* Start root SCSS */
 :root {
     --main-color: #656CCF;
     --second-color: #78CDAB;
@@ -8,39 +8,41 @@
     --transparent-color: transparent;
 }
 
+// Font-face import
 @font-face {
     font-family: 'Open Sans';
-    src: url('/public/fonts/open-sans/OpenSans-VariableFont_wdth,wght.ttf') format('ttf');
+    src: url('/public/source/fonts/open-sans/OpenSans-VariableFont_wdth,wght.ttf') format('ttf');
     font-weight: 100 900;
     font-style: normal;
     font-display: swap;
 }
 
-/* End root CSS */
+/* End root SCSS */
 
-/* Start global CSS */
+/* Start global SCSS */
 
-/* Start body CSS */
+// Basis variabelen
+$font-family: 'Open Sans', sans-serif;
+$font-size-base: 18px;
+$font-color-dark: var(--black-color);
+$font-color-light: var(--white-color);
+$transition-time: 0.3s;
 
+// Body styling
 body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: $font-family;
     font-weight: 400;
-    background-color: white;
-    color: black;
-    transition: background-color 0.3s, color 0.3s;
+    background-color: $font-color-light;
+    color: $font-color-dark;
+    transition: background-color $transition-time, color $transition-time;
+
+    &.dark-theme {
+        background-color: $font-color-dark;
+        color: $font-color-light;
+    }
 }
 
-body.dark-theme {
-    background-color: black;
-    color: white;
-}
-
-#theme-switcher {
-    cursor: pointer;
-    background: none;
-    border: none;
-}
-
+// Heading styling
 h1, h2, h3, h4, h5, h6 {
     margin: 0;
 }
@@ -69,6 +71,7 @@ h6 {
     font-size: 22px;
 }
 
+// Media queries
 @media (max-width: 992px) {
     h1 {
         font-size: 42px;
@@ -121,11 +124,10 @@ h6 {
     }
 }
 
+// Paragraph styling
 p {
-    font-size: 18px;
+    font-size: $font-size-base;
     margin: 0;
 }
 
-/* End body CSS */
-
-/* End global CSS */
+/* End global SCSS */

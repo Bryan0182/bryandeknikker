@@ -3,13 +3,13 @@
 @section('title', $blog->title)
 
 @push('styles')
-    <link rel="stylesheet" href="{{ asset('css/header.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/hero.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/fact.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/slider.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/text.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/cta.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/footer.css') }}">
+    <link rel="stylesheet" href="{{ asset('/output/css/header.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('/output/css/hero.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('/output/css/fact.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('/output/css/slider.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('/output/css/text.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('/output/css/cta.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('/output/css/footer.min.css') }}">
 @endpush
 
 @section('content')

@@ -3,8 +3,8 @@
         <div class="row">
             <div class="col-md-5 mb-3">
                 <a href="/" class="navbar-brand d-flex align-items-center">
-                    <img src="{{ asset('/images/BK-logo.svg') }}" class="logo-light" width="100" height="65" alt="Logo van Bryan de Knikker">
-                    <img src="{{ asset('/images/BK-logo-white.svg') }}" class="logo-dark" width="100" height="65" alt="Logo van Bryan de Knikker">
+                    <img src="{{ asset('/output/images/BK-logo.svg') }}" class="logo-light" width="100" height="65" alt="Logo van Bryan de Knikker">
+                    <img src="{{ asset('/output/images/BK-logo-white.svg') }}" class="logo-dark" width="100" height="65" alt="Logo van Bryan de Knikker">
                 </a>
                 <form autocomplete="off">
                     <p>Blijf op de hoogte van nieuwe cases door je aan te melden voor mijn nieuwsbrief.</p>
@@ -32,7 +32,7 @@
                 <ul class="nav flex-column">
                     <li class="nav-item mb-2">
                         <a href="https://www.linkedin.com/in/bryan-de-knikker/" class="nav-link p-0 text-body-secondary" target="_blank">
-                            <img src="/images/linkedin-logo.svg" alt="LinkedIn Logo" style="width: 16px; height: 16px; margin-right: 5px;">
+                            <img src="/output/images/linkedin-logo.svg" alt="LinkedIn Logo" style="width: 16px; height: 16px; margin-right: 5px;">
                             LinkedIn
                         </a>
                     </li>

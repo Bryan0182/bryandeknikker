@@ -1,13 +1,11 @@
-/* Start CTA CSS */
-
 .cta-container-fluid {
     border-top: 1px solid var(--black-color);
     border-bottom: 1px solid var(--black-color);
-}
 
-body.dark-theme .cta-container-fluid {
-    border-top: 1px solid var(--white-color);
-    border-bottom: 1px solid var(--white-color);
+    body.dark-theme & {
+        border-top: 1px solid var(--white-color);
+        border-bottom: 1px solid var(--white-color);
+    }
 }
 
 .cta-title {
@@ -17,5 +15,3 @@ body.dark-theme .cta-container-fluid {
 .cta-text {
     padding: 15px 0;
 }
-
-/* End CTA CSS */

@@ -9,7 +9,7 @@
     <!-- Einde pagina titel -->
 
     <!-- Begin favicon -->
-    <link rel="icon" type="image/x-icon" href="{{URL('/images/BK-favicon.svg')}}">
+    <link rel="icon" type="image/x-icon" href="{{URL('/output/images/BK-favicon.svg')}}">
     <!-- Einde favicon -->
 
     <!-- Begin Bootstrap CSS -->
@@ -23,7 +23,7 @@
     <!-- Einde Slick Slider CSS -->
 
     <!-- Begin eigen CSS -->
-    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+    <link rel="stylesheet" href="{{ asset('/output/css/app.min.css') }}">
     @stack('styles')
     <!-- Einde eigen CSS -->
 </head>
@@ -56,7 +56,7 @@
 <!-- Einde Slick Slider JS -->
 
 <!-- Begin eigen JS -->
-<script src="{{ asset('js/app.js') }}"></script>
+<script src="{{ asset('/output/js/app.min.js') }}"></script>
 @stack('scripts')
 <!-- Einde eigen JS -->
 </body>

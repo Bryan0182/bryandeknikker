@@ -5,6 +5,7 @@
     max-width: 350px;
     border: none;
     text-align: center;
+    background: var(--transparent-color);
 }
 
 .card img {
@@ -26,8 +27,21 @@
     margin-right: auto;
 }
 
+.card-title {
+    color: var(--black-color);
+}
+
+body.dark-theme .card-title {
+    color: var(--white-color);
+}
+
 .card-text {
     padding: 30px 0;
+    color: var(--black-color);
+}
+
+body.dark-theme .card-text {
+    color: var(--white-color);
 }
 
 .read-more-recent-blogs-button {

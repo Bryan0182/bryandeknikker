@@ -1,22 +1,59 @@
 const mix = require('laravel-mix');
 
-// Compileer en minify SCSS-bestanden vanuit de public map
 mix.sass('public/source/sass/app.scss', 'public/output/css/app.min.css')
     .options({
         processCssUrls: false
     });
 
-// Minify JS-bestanden
-mix.scripts([
-    'public/source/js/app.js',
-    // Voeg hier meer JS-bestanden toe als je die wilt combineren en minify'en
-], 'public/output/js/all.min.js');
+mix.sass('public/source/sass/hero.scss', 'public/output/css/hero.min.css')
+    .options({
+        processCssUrls: false
+    });
 
-// Kopieer de fonts van de bron naar de doelmap
+mix.sass('public/source/sass/header.scss', 'public/output/css/header.min.css')
+    .options({
+        processCssUrls: false
+    });
+
+mix.sass('public/source/sass/footer.scss', 'public/output/css/footer.min.css')
+    .options({
+        processCssUrls: false
+    });
+
+mix.sass('public/source/sass/slider.scss', 'public/output/css/slider.min.css')
+    .options({
+        processCssUrls: false
+    });
+
+mix.sass('public/source/sass/cta.scss', 'public/output/css/cta.min.css')
+    .options({
+        processCssUrls: false
+    });
+
+mix.sass('public/source/sass/fact.scss', 'public/output/css/fact.min.css')
+    .options({
+        processCssUrls: false
+    });
+
+mix.sass('public/source/sass/recent_cases.scss', 'public/output/css/recent_cases.min.css')
+    .options({
+        processCssUrls: false
+    });
+
+mix.sass('public/source/sass/skills.scss', 'public/output/css/skills.min.css')
+    .options({
+        processCssUrls: false
+    });
+
+mix.sass('public/source/sass/text.scss', 'public/output/css/text.min.css')
+    .options({
+        processCssUrls: false
+    });
+
+mix.js('public/source/js/app.js', 'public/output/js/app.min.js');
+
 mix.copyDirectory('public/source/fonts', 'public/output/fonts');
 
-// Kopieer de afbeeldingen van de bron naar de doelmap
 mix.copyDirectory('public/source/images', 'public/output/images');
 
-// Kopieer de storage-map van de bron naar de doelmap
 mix.copyDirectory('public/source/storage', 'public/output/storage');
