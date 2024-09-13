@@ -2,6 +2,15 @@
 
 .hero-row {
     margin: 0;
+    padding: 6rem 0 3rem 0;
+
+    @media (max-width: 991px) {
+        padding: 3rem 0;
+
+        .image-column {
+            margin-top: 3rem;
+        }
+    }
 }
 
 .description-paragraph {
