@@ -4,7 +4,7 @@
         <h1 class="mb-4 text-center">Recente cases</h1>
 
         @if ($recentBlogs->isEmpty())
-            <p>Er zijn momenteel geen recente cases beschikbaar.</p>
+            <p class="text-center">Er zijn momenteel geen recente cases beschikbaar.</p>
         @else
             <div class="row justify-content-between">
                 @foreach ($recentBlogs as $index => $blog)
