@@ -32,18 +32,22 @@ class BlogController extends Controller
             'results_description' => 'required|string',
         ]);
 
-        // Sla logo afbeelding op
+        // Sla logo afbeelding op in 'public/source/storage/logos'
         if ($request->hasFile('logo_image')) {
-            $logoImagePath = $request->file('logo_image')->store('logos', 'public');
+            $logoImage = $request->file('logo_image');
+            $logoImagePath = 'source/storage/logos/' . $logoImage->getClientOriginalName();
+            $logoImage->move(public_path('source/storage/logos'), $logoImage->getClientOriginalName());
         } else {
             $logoImagePath = null;
         }
 
-        // Sla slider afbeeldingen op
+        // Sla slider afbeeldingen op in 'public/source/storage/sliders'
         $sliderImagesPaths = [];
         if ($request->hasFile('slider_images')) {
             foreach ($request->file('slider_images') as $image) {
-                $sliderImagesPaths[] = $image->store('sliders', 'public');
+                $sliderImagePath = 'source/storage/sliders/' . $image->getClientOriginalName();
+                $image->move(public_path('source/storage/sliders'), $image->getClientOriginalName());
+                $sliderImagesPaths[] = $sliderImagePath;
             }
         }
 
@@ -52,7 +56,7 @@ class BlogController extends Controller
             'title' => $validated['title'],
             'intro_text' => $validated['intro_text'],
             'website_url' => $validated['website_url'],
-            'logo_image' => $logoImagePath,
+            'logo_image' => '../output/storage/logos/' . $logoImage->getClientOriginalName(), // Wijzig hier de URL naar de output map
             'fact1_title' => $validated['fact1_title'],
             'fact1_description' => $validated['fact1_description'],
             'fact2_title' => $validated['fact2_title'],
@@ -63,7 +67,9 @@ class BlogController extends Controller
             'challenge_description' => $validated['challenge_description'],
             'approach_title' => $validated['approach_title'],
             'approach_description' => $validated['approach_description'],
-            'slider_images' => json_encode($sliderImagesPaths),
+            'slider_images' => json_encode(array_map(function($path) {
+                return '../output/storage/sliders/' . basename($path); // Wijzig hier de URL naar de output map
+            }, $sliderImagesPaths)),
             'results_title' => $validated['results_title'],
             'results_description' => $validated['results_description'],
         ]);
