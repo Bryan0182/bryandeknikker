@@ -2,8 +2,9 @@
     <footer class="py-5">
         <div class="row">
             <div class="col-md-5 mb-3">
-                <a href="/" class="footer-brand d-flex align-items-center mb-3">
-                    <img src="{{ asset('/images/BK-logo.svg') }}" width="100" height="65" alt="Logo van Bryan de Knikker">
+                <a href="/" class="navbar-brand d-flex align-items-center">
+                    <img src="{{ asset('/images/BK-logo.svg') }}" class="logo-light" width="100" height="65" alt="Logo van Bryan de Knikker">
+                    <img src="{{ asset('/images/BK-logo-white.svg') }}" class="logo-dark" width="100" height="65" alt="Logo van Bryan de Knikker">
                 </a>
                 <form autocomplete="off">
                     <p>Blijf op de hoogte van nieuwe cases door je aan te melden voor mijn nieuwsbrief.</p>

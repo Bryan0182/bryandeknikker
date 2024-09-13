@@ -1,5 +1,17 @@
 /* Start footer CSS */
 
+.logo-dark {
+    display: none;
+}
+
+body.dark-theme .logo-light {
+    display: none;
+}
+
+body.dark-theme .logo-dark {
+    display: block;
+}
+
 .footer-brand {
     width: fit-content;
 }
@@ -13,6 +25,10 @@
     border: 1px solid var(--main-color);
     color: var(--black-color);
     transition: ease-in-out 0.4s;
+}
+
+body.dark-theme .newsletter-subscription-button {
+    color: var(--white-color);
 }
 
 .newsletter-subscription-button:hover, .newsletter-subscription-button:focus, .newsletter-subscription-button:active {
