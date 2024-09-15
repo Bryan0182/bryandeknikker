@@ -55,6 +55,11 @@ mix.sass('public/source/sass/login_form.scss', 'public/output/css/login_form.min
         processCssUrls: false
     });
 
+mix.sass('public/source/sass/dashboard_overview.scss', 'public/output/css/dashboard_overview.min.css')
+    .options({
+        processCssUrls: false
+    });
+
 mix.js('public/source/js/app.js', 'public/output/js/app.min.js');
 
 mix.copyDirectory('public/source/fonts', 'public/output/fonts');
