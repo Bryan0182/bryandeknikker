@@ -7,7 +7,7 @@
                     <div class="position-relative">
                         <div
                             class="position-absolute top-0 start-50 translate-middle bg-primary text-white rounded-circle p-3 fs-4 fw-bold fact-card-number">
-                            <img src="/images/1.svg" width="25px" height="35px"></div>
+                            <img src="/output/images/1.svg" width="25px" height="35px"></div>
                     </div>
                     <div class="card-body mt-4">
                         <h5 class="card-title fw-bold fact-card-title">{{ $fact1_title }}</h5>
@@ -22,7 +22,7 @@
                     <div class="position-relative">
                         <div
                             class="position-absolute top-0 start-50 translate-middle bg-primary text-white rounded-circle p-3 fs-4 fw-bold fact-card-number">
-                            <img src="/images/2.svg" width="25px" height="35px"></div>
+                            <img src="/output/images/2.svg" width="25px" height="35px"></div>
                     </div>
                     <div class="card-body mt-4">
                         <h5 class="card-title fw-bold fact-card-title">{{ $fact2_title }}</h5>
@@ -37,7 +37,7 @@
                     <div class="position-relative">
                         <div
                             class="position-absolute top-0 start-50 translate-middle bg-primary text-white rounded-circle p-3 fs-4 fw-bold fact-card-number">
-                            <img src="/images/3.svg" width="25px" height="35px"></div>
+                            <img src="/output/images/3.svg" width="25px" height="35px"></div>
                     </div>
                     <div class="card-body mt-4">
                         <h5 class="card-title fw-bold fact-card-title">{{ $fact3_title }}</h5>

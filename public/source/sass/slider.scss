@@ -1,7 +1,7 @@
 .slick-prev {
     &:before {
         content: '';
-        background: url(/images/angle-left.svg) no-repeat;
+        background: url('/output/images/angle-left.svg') no-repeat;
         width: auto;
         height: 30px;
         display: block;
@@ -13,13 +13,16 @@
 .slick-slide {
     img {
         border-radius: 5px;
+        width: 1150px;
+        height: auto;
+        margin: auto;
     }
 }
 
 .slick-next {
     &:before {
         content: '';
-        background: url(/images/angle-right.svg) no-repeat;
+        background: url('/output/images/angle-right.svg') no-repeat;
         width: auto;
         height: 30px;
         display: block;

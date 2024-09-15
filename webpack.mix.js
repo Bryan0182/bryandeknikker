@@ -70,5 +70,3 @@ mix.js('public/source/js/app.js', 'public/output/js/app.min.js');
 mix.copyDirectory('public/source/fonts', 'public/output/fonts');
 
 mix.copyDirectory('public/source/images', 'public/output/images');
-
-mix.copyDirectory('public/source/storage', 'public/output/storage');
