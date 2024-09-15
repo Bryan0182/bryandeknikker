@@ -27,7 +27,7 @@
     ])
     @endcomponent
 
-    @include('components.recent_blogs', ['recentBlogs' => $recentBlogs])
+    @include('components.recent_cases', ['recentBlogs' => $recentBlogs])
 
     @component('components.skills', [
         'frontend' => [

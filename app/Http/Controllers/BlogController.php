@@ -5,10 +5,15 @@ namespace App\Http\Controllers;
 use App\Models\Blog;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
-use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Auth;
 
 class BlogController extends Controller
 {
+    public function create()
+    {
+        return view('pages.case_create');
+    }
+
     public function store(Request $request)
     {
         // Valideer de formulierinvoer
@@ -32,31 +37,26 @@ class BlogController extends Controller
             'results_description' => 'required|string',
         ]);
 
-        // Sla logo afbeelding op in 'public/source/storage/logos'
         if ($request->hasFile('logo_image')) {
             $logoImage = $request->file('logo_image');
-            $logoImagePath = 'source/storage/logos/' . $logoImage->getClientOriginalName();
-            $logoImage->move(public_path('source/storage/logos'), $logoImage->getClientOriginalName());
+            $logoImagePath = $logoImage->store('source/storage/logos', 'public');
         } else {
             $logoImagePath = null;
         }
 
-        // Sla slider afbeeldingen op in 'public/source/storage/sliders'
         $sliderImagesPaths = [];
         if ($request->hasFile('slider_images')) {
             foreach ($request->file('slider_images') as $image) {
-                $sliderImagePath = 'source/storage/sliders/' . $image->getClientOriginalName();
-                $image->move(public_path('source/storage/sliders'), $image->getClientOriginalName());
+                $sliderImagePath = $image->store('source/storage/sliders', 'public');
                 $sliderImagesPaths[] = $sliderImagePath;
             }
         }
 
-        // Maak een nieuwe blog aan
         $blog = Blog::create([
             'title' => $validated['title'],
             'intro_text' => $validated['intro_text'],
             'website_url' => $validated['website_url'],
-            'logo_image' => '../output/storage/logos/' . $logoImage->getClientOriginalName(), // Wijzig hier de URL naar de output map
+            'logo_image' => 'storage/' . $logoImagePath,
             'fact1_title' => $validated['fact1_title'],
             'fact1_description' => $validated['fact1_description'],
             'fact2_title' => $validated['fact2_title'],
@@ -67,37 +67,33 @@ class BlogController extends Controller
             'challenge_description' => $validated['challenge_description'],
             'approach_title' => $validated['approach_title'],
             'approach_description' => $validated['approach_description'],
-            'slider_images' => json_encode(array_map(function($path) {
-                return '../output/storage/sliders/' . basename($path); // Wijzig hier de URL naar de output map
+            'slider_images' => json_encode(array_map(function ($path) {
+                return 'storage/' . $path;
             }, $sliderImagesPaths)),
             'results_title' => $validated['results_title'],
             'results_description' => $validated['results_description'],
         ]);
 
-        // Redirect naar de success pagina met een succesmelding
-        return redirect()->route('blogs.success')->with('success', 'Blog succesvol aangemaakt!');
+        return redirect()->route('pages.case_success')->with('success', 'Blog succesvol aangemaakt!');
     }
 
     public function success()
     {
-        return view('pages.blog_success');
+        return view('pages.case_success');
     }
 
     public function showRecentBlogs()
     {
-        // Verkrijg de 3 meest recente blogs
         $recentBlogs = Blog::orderBy('created_at', 'desc')->limit(3)->get();
 
-        return view('pages.recent_blogs', ['recentBlogs' => $recentBlogs]);
+        return view('pages.recent_cases', ['recentBlogs' => $recentBlogs]);
     }
 
     public function show($slug)
     {
         $blog = Blog::where('slug', $slug)->firstOrFail();
-
-        // Decodeer de slider_images als deze een JSON-string is
         $blog->slider_images = json_decode($blog->slider_images, true);
 
-        return view('pages.blog_detail', ['blog' => $blog]);
+        return view('pages.case_detail', ['blog' => $blog]);
     }
 }

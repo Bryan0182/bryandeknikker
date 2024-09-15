@@ -3,14 +3,15 @@
 @section('title', 'Blog aanmaken')
 
 @push('styles')
-    <link rel="stylesheet" href="{{ asset('css/header.css') }}">
+    <link rel="stylesheet" href="{{ asset('/output/css/header.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('/output/css/footer.min.css') }}">
 @endpush
 
 @section('content')
     <div class="container hero-container col-12">
         <div class="row align-items-center g-5 py-5 hero-row">
             <div class="col-12">
-                <h1>Nieuwe Blog Aanmaken</h1>
+                <h1>Nieuwe case Aanmaken</h1>
 
                 @if ($errors->any())
                     <div class="alert alert-danger">
