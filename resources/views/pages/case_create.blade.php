@@ -4,6 +4,7 @@
 
 @push('styles')
     <link rel="stylesheet" href="{{ asset('/output/css/header.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('/output/css/case_create.min.css') }}">
     <link rel="stylesheet" href="{{ asset('/output/css/footer.min.css') }}">
 @endpush
 
@@ -11,7 +12,7 @@
     <div class="container hero-container col-12">
         <div class="row align-items-center g-5 py-5 hero-row">
             <div class="col-12">
-                <h1>Nieuwe case Aanmaken</h1>
+                <h1>Nieuwe case</h1>
 
                 @if ($errors->any())
                     <div class="alert alert-danger">
@@ -23,7 +24,7 @@
                     </div>
                 @endif
 
-                <form action="{{ route('blogs.store') }}" method="POST" enctype="multipart/form-data">
+                <form action="{{ route('blogs.store') }}" method="POST" enctype="multipart/form-data" class="form-case-create">
                     @csrf
 
                     <!-- Titel -->
@@ -124,7 +125,7 @@
                                   required></textarea>
                     </div>
 
-                    <button type="submit" class="btn btn-primary">Blog Opslaan</button>
+                    <button type="submit" class="btn btn-primary create-case-form-button">Case Opslaan</button>
                 </form>
             </div>
         </div>
