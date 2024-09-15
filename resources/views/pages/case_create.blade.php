@@ -42,7 +42,7 @@
                     <!-- Website URL -->
                     <div class="mb-3">
                         <label for="website_url" class="form-label">Website URL</label>
-                        <input type="url" name="website_url" id="website_url" class="form-control" required>
+                        <input type="url" name="website_url" id="website_url" class="form-control">
                     </div>
 
                     <!-- Logo Afbeelding -->

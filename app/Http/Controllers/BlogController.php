@@ -20,7 +20,7 @@ class BlogController extends Controller
         $validated = $request->validate([
             'title' => 'required|string|max:255',
             'intro_text' => 'required|string',
-            'website_url' => 'required|url',
+            'website_url' => 'nullable|url',
             'logo_image' => 'required|image|mimes:jpg,png,jpeg,gif,webp,svg|max:2048',
             'fact1_title' => 'required|string|max:255',
             'fact1_description' => 'required|string',
@@ -37,26 +37,29 @@ class BlogController extends Controller
             'results_description' => 'required|string',
         ]);
 
+        // Sla het logo op in de 'public/output/storage/logos' map
         if ($request->hasFile('logo_image')) {
             $logoImage = $request->file('logo_image');
-            $logoImagePath = $logoImage->store('source/storage/logos', 'public');
+            $logoImagePath = $logoImage->store('output/storage/logos', 'public');
         } else {
             $logoImagePath = null;
         }
 
+        // Sla slider afbeeldingen op in 'public/output/storage/sliders'
         $sliderImagesPaths = [];
         if ($request->hasFile('slider_images')) {
             foreach ($request->file('slider_images') as $image) {
-                $sliderImagePath = $image->store('source/storage/sliders', 'public');
+                $sliderImagePath = $image->store('output/storage/sliders', 'public');
                 $sliderImagesPaths[] = $sliderImagePath;
             }
         }
 
+        // Maak een nieuwe blog aan met de correcte paden
         $blog = Blog::create([
             'title' => $validated['title'],
             'intro_text' => $validated['intro_text'],
             'website_url' => $validated['website_url'],
-            'logo_image' => 'storage/' . $logoImagePath,
+            'logo_image' => $logoImagePath ? '/' . $logoImagePath : null,
             'fact1_title' => $validated['fact1_title'],
             'fact1_description' => $validated['fact1_description'],
             'fact2_title' => $validated['fact2_title'],
@@ -68,7 +71,7 @@ class BlogController extends Controller
             'approach_title' => $validated['approach_title'],
             'approach_description' => $validated['approach_description'],
             'slider_images' => json_encode(array_map(function ($path) {
-                return 'storage/' . $path;
+                return '/' . $path;
             }, $sliderImagesPaths)),
             'results_title' => $validated['results_title'],
             'results_description' => $validated['results_description'],

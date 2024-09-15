@@ -10,7 +10,7 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 
 Route::get('/cases/create', [BlogController::class, 'create'])->name('blogs.create')->middleware('auth');
 
-Route::get('/cases/success', [BlogController::class, 'success'])->name('blogs.success');
+Route::get('/cases/success', [BlogController::class, 'success'])->name('pages.case_success');
 
 Route::post('/cases', [BlogController::class, 'store'])->name('blogs.store');
 
