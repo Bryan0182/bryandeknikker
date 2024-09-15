@@ -50,6 +50,11 @@ mix.sass('public/source/sass/text.scss', 'public/output/css/text.min.css')
         processCssUrls: false
     });
 
+mix.sass('public/source/sass/login_form.scss', 'public/output/css/login_form.min.css')
+    .options({
+        processCssUrls: false
+    });
+
 mix.js('public/source/js/app.js', 'public/output/js/app.min.js');
 
 mix.copyDirectory('public/source/fonts', 'public/output/fonts');
