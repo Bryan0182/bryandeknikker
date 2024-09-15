@@ -19,24 +19,27 @@ body.dark-theme {
             color: var(--white-color);
         }
     }
-
-    .newsletter-subscription-button {
-        color: var(--white-color);
-    }
 }
 
-.footer-brand {
+.navbar-brand {
     width: fit-content;
 }
 
 .newsletter-subscription-form {
     border: 1px solid var(--main-color);
+
+    &:hover,
+    &:focus,
+    &:active {
+        border-color: var(--main-color) !important;
+        box-shadow: none;
+    }
 }
 
 .newsletter-subscription-button {
     background: transparent;
     border: 1px solid var(--main-color);
-    color: var(--black-color);
+    color: var(--main-color);
     transition: ease-in-out 0.4s;
 
     &:hover,
