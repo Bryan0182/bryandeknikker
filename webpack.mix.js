@@ -70,6 +70,11 @@ mix.sass('public/source/sass/404.scss', 'public/output/css/404.min.css')
         processCssUrls: false
     });
 
+mix.sass('public/source/sass/contact.scss', 'public/output/css/contact.min.css')
+    .options({
+        processCssUrls: false
+    });
+
 mix.js('public/source/js/app.js', 'public/output/js/app.min.js');
 
 mix.copyDirectory('public/source/fonts', 'public/output/fonts');
