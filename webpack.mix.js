@@ -65,6 +65,11 @@ mix.sass('public/source/sass/case_create.scss', 'public/output/css/case_create.m
         processCssUrls: false
     });
 
+mix.sass('public/source/sass/404.scss', 'public/output/css/404.min.css')
+    .options({
+        processCssUrls: false
+    });
+
 mix.js('public/source/js/app.js', 'public/output/js/app.min.js');
 
 mix.copyDirectory('public/source/fonts', 'public/output/fonts');
