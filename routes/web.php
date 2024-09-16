@@ -15,6 +15,8 @@ Route::get('/cases/success', [BlogController::class, 'success'])->name('pages.ca
 
 Route::post('/cases', [BlogController::class, 'store'])->name('blogs.store');
 
+Route::get('/cases', [BlogController::class, 'index'])->name('cases');
+
 Route::get('/recent-blogs', [BlogController::class, 'showRecentBlogs'])->name('blogs.recent');
 
 Route::get('/cases/{slug}', [BlogController::class, 'show'])->name('blogs.show');

@@ -31,7 +31,7 @@ class ContactFormConfirmation extends Mailable
     {
         return $this->view('emails.confirmation')
             ->with([
-                'name' => $this->formData['name'],
+                'name' => $this->formData['naam'],
             ])
             ->subject('Onderwerp: Bevestiging van ontvangst van je contactformulier')
             ->from('info@bryandeknikker.nl', 'Bryan de Knikker');

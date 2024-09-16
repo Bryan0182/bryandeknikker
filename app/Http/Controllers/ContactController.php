@@ -30,9 +30,12 @@ class ContactController extends Controller
     {
         // Valideer de ingediende gegevens
         $validatedData = $request->validate([
-            'name' => 'required',
-            'email' => 'required|email',
-            'contactmessage' => 'required',
+            'naam' => 'required|string|max:255',
+            'emailadres' => 'required|email',
+            'telefoonnummer' => 'nullable|string|max:20',
+            'reden_van_contact' => 'required|string',
+            'onderwerp' => 'required|string|max:255',
+            'bericht' => 'required|string',
         ]);
 
         // Sla de ingediende gegevens op in de database
@@ -42,7 +45,7 @@ class ContactController extends Controller
         Mail::to('info@bryandeknikker.nl')->send(new ContactFormSubmitted($validatedData));
 
         // Stuur een bevestigingsmail naar de afzender
-        Mail::to($validatedData['email'])->send(new ContactFormConfirmation($validatedData));
+        Mail::to($validatedData['emailadres'])->send(new ContactFormConfirmation($validatedData));
 
         // Stuur de gebruiker terug met een succesbericht
         return back()->with('success', 'Bedankt voor je bericht! We nemen zo spoedig mogelijk contact met je op.');

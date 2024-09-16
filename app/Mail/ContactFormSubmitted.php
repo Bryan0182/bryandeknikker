@@ -32,9 +32,12 @@ class ContactFormSubmitted extends Mailable
     {
         return $this->view('emails.contact-mail')
             ->with([
-                'name' => $this->formData['name'],
-                'email' => $this->formData['email'],
-                'contactmessage' => $this->formData['contactmessage'],
+                'naam' => $this->formData['naam'],
+                'emailadres' => $this->formData['emailadres'],
+                'telefoonnummer' => $this->formData['telefoonnummer'] ?? 'Niet opgegeven', // Optioneel veld
+                'reden_van_contact' => $this->formData['reden_van_contact'],
+                'onderwerp' => $this->formData['onderwerp'],
+                'bericht' => $this->formData['bericht'],
             ])
             ->subject('Contactformulier Ingevuld')
             ->from('info@bryandeknikker.nl', 'Bryan de Knikker');
