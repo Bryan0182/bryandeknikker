@@ -18,7 +18,7 @@
             'title' => $blog->title,
             'description' => $blog->intro_text,
             'first_button' => 'Contact',
-            'first_button_url' => '',
+            'first_button_url' => '/contact',
             'second_button' => 'Bezoek de website',
             'second_button_url' => '',
             'imageSrc' => Storage::url($blog->logo_image),
@@ -68,7 +68,7 @@
             'title' => 'Benieuwd wat ik voor jou kan betekenen?',
             'description' => 'Neem nu contact op',
             'first_button' => 'Contact',
-            'first_button_url' => '',
+            'first_button_url' => '/contact',
             'second_button' => '',
             'second_button_url' => ''
         ])
