@@ -19,9 +19,9 @@
                     </li>
                 </ul>
                 <div class="d-flex flex-column flex-lg-row buttons-row">
-                    <button type="button" class="btn btn-outline-dark cases-header-button me-0 me-lg-2 mb-2 mb-lg-0">
+                    <a href="{{ route('cases') }}" type="button" class="btn btn-outline-dark cases-header-button me-0 me-lg-2 mb-2 mb-lg-0">
                         Cases
-                    </button>
+                    </a>
                     <button type="button" class="btn btn-primary contact-header-button">Contact</button>
                     <button id="theme-switcher" aria-label="Switch Theme">
                         <span id="icon-sun" style="display: none;">

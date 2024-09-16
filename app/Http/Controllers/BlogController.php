@@ -99,4 +99,16 @@ class BlogController extends Controller
 
         return view('pages.case_detail', ['blog' => $blog]);
     }
+
+    /**
+     * Toon een overzicht van alle cases (blogs).
+     *
+     * @return \Illuminate\Contracts\View\View
+     */
+    public function index()
+    {
+        $blogs = Blog::orderBy('created_at', 'desc')->get();
+
+        return view('pages.cases', compact('blogs'));
+    }
 }
