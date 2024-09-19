@@ -6,29 +6,32 @@ use App\Http\Controllers\BlogController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\AboutController;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
-Route::get('/cases/create', [BlogController::class, 'create'])->name('blogs.create')->middleware('auth');
+Route::get('/cases/create/', [BlogController::class, 'create'])->name('blogs.create')->middleware('auth');
 
-Route::get('/cases/success', [BlogController::class, 'success'])->name('pages.case_success');
+Route::get('/cases/success/', [BlogController::class, 'success'])->name('pages.case_success');
 
-Route::post('/cases', [BlogController::class, 'store'])->name('blogs.store');
+Route::post('/cases/', [BlogController::class, 'store'])->name('blogs.store');
 
-Route::get('/cases', [BlogController::class, 'index'])->name('cases');
+Route::get('/cases/', [BlogController::class, 'index'])->name('cases');
 
-Route::get('/recent-blogs', [BlogController::class, 'showRecentBlogs'])->name('blogs.recent');
+Route::get('/recent-blogs/', [BlogController::class, 'showRecentBlogs'])->name('blogs.recent');
 
-Route::get('/cases/{slug}', [BlogController::class, 'show'])->name('blogs.show');
+Route::get('/cases/{slug}/', [BlogController::class, 'show'])->name('blogs.show');
 
-Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
+Route::get('/login/', [LoginController::class, 'showLoginForm'])->name('login');
 
-Route::post('/login', [LoginController::class, 'login']);
+Route::post('/login/', [LoginController::class, 'login']);
 
-Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
+Route::post('/logout/', [LoginController::class, 'logout'])->name('logout');
 
-Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard')->middleware('auth');
+Route::get('/dashboard/', [DashboardController::class, 'index'])->name('dashboard')->middleware('auth');
 
 Route::get('/contact/', [ContactController::class, 'contact'])->name('contact');
 
 Route::post('/contact/', [ContactController::class, 'contactPost'])->name('contact.store');
+
+Route::get('/over-mij/', [AboutController::class, 'index'])->name('over-mij');

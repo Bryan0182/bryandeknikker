@@ -12,7 +12,7 @@
             <div class="collapse navbar-collapse" id="navbarNav" style="width: fit-content;">
                 <ul class="navbar-nav me-auto">
                     <li class="nav-item nav-item-header align-items-center d-flex">
-                        <a href="#" class="nav-link">Over mij</a>
+                        <a href="{{ route('over-mij') }}" class="nav-link">Over mij</a>
                     </li>
                     <li class="nav-item nav-item-header align-items-center d-flex">
                         <a href="#" class="nav-link">Skills</a>

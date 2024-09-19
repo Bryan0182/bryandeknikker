@@ -23,7 +23,8 @@
         'imageSrc' => asset('/output/images/blob-profielfoto-transparent.png'),
         'altText' => 'Foto van Bryan de Knikker',
         'width' => 300,
-        'height' => 300
+        'height' => 300,
+        'imageClass' => ''
     ])
     @endcomponent
 
