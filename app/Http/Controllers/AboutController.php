@@ -8,6 +8,9 @@ class AboutController extends Controller
 {
     public function index()
     {
-        return view('/pages/about_me');
+        $geboorteDatum = '2004-06-27';
+        $leeftijd = berekenLeeftijd($geboorteDatum);
+
+        return view('/pages/about_me', compact('leeftijd'));
     }
 }
