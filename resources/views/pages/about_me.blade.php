@@ -18,7 +18,7 @@
         'first_button_url' => '',
         'second_button' => 'Lees meer',
         'second_button_url' => '',
-        'imageSrc' => 'about_me_diploma.jpg',
+        'imageSrc' => 'about_me_diploma.png',
         'altText' => 'Foto van Bryan de Knikker',
         'width' => 300,
         'height' => 300,
