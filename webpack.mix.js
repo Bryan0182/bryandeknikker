@@ -80,6 +80,11 @@ mix.sass('public/source/sass/features.scss', 'public/output/css/features.min.css
         processCssUrls: false
     });
 
+mix.sass('public/source/sass/experience.scss', 'public/output/css/experience.min.css')
+    .options({
+        processCssUrls: false
+    });
+
 mix.js('public/source/js/app.js', 'public/output/js/app.min.js');
 
 mix.copyDirectory('public/source/fonts', 'public/output/fonts');
