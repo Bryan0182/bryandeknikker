@@ -4,7 +4,7 @@
     z-index: 1000;
     border-bottom: 1px solid var(--black-color);
     background-color: var(--white-color);
-    transition: padding 0.3s;
+    transition: padding 0.3s, background-color 0.3s;
 
     &.is-sticky .navbar {
         padding-top: 0;
