@@ -20,7 +20,7 @@
         'first_button_url' => '',
         'second_button' => 'Lees meer',
         'second_button_url' => '',
-        'imageSrc' => asset('/output/images/blob-profielfoto-transparent.png'),
+        'imageSrc' => 'blob-profielfoto-transparent.png',
         'altText' => 'Foto van Bryan de Knikker',
         'width' => 300,
         'height' => 300,

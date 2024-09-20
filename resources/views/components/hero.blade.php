@@ -14,7 +14,7 @@
             </div>
         </div>
         <div class="col-12 col-lg-6 mt-tablet image-column">
-            <img src="{{ $imageSrc }}" class="d-block mx-auto ms-md-auto me-lg-0 img-fluid @if(isset($imageClass)){{ $imageClass }}@endif" alt="{{ $altText }}" width="{{ $width }}" height="{{ $height }}" loading="eager">
+            <img src="{{ asset('output/images/' . $imageSrc) }}" class="d-block mx-auto ms-md-auto me-lg-0 img-fluid @if(isset($imageClass)){{ $imageClass }}@endif" alt="{{ $altText }}" width="{{ $width }}" height="{{ $height }}" loading="eager">
         </div>
     </div>
 </div>
