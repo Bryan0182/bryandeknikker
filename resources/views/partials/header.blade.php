@@ -15,7 +15,7 @@
                         <a href="{{ route('over-mij') }}" class="nav-link">Over mij</a>
                     </li>
                     <li class="nav-item nav-item-header align-items-center d-flex">
-                        <a href="#" class="nav-link">Skills</a>
+                        <a href="{{ route('skills') }}" class="nav-link">Skills</a>
                     </li>
                 </ul>
                 <div class="d-flex flex-column flex-lg-row buttons-row">
