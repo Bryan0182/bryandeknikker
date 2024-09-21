@@ -95,4 +95,13 @@ class SkillsController extends Controller
     {
         return $this->showSkills();
     }
+
+    public function show($slug)
+    {
+        // Haal de skill op op basis van de slug
+        $skill = Skill::where('name', $slug)->firstOrFail();
+
+        // Geef de skill door aan de detail view
+        return view('pages.skill_detail', compact('skill'));
+    }
 }

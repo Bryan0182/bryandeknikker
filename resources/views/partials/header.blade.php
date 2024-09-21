@@ -22,7 +22,9 @@
                     <a href="{{ route('cases') }}" type="button" class="btn btn-outline-dark cases-header-button me-0 me-lg-2 mb-2 mb-lg-0">
                         Cases
                     </a>
-                    <button type="button" class="btn btn-primary contact-header-button">Contact</button>
+                    <a href="{{ route('contact') }}" type="button" class="btn btn-outline-dark contact-header-button me-0 me-lg-2 mb-2 mb-lg-0">
+                        Contact
+                    </a>
                     <button id="theme-switcher" aria-label="Switch Theme">
                         <span id="icon-sun" style="display: none;">
                             <img src="{{ asset('/output/images/sun.svg') }}" alt="Light Theme" width="30" height="30">

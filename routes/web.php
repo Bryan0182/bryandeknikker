@@ -44,3 +44,5 @@ Route::get('/skills/create', [SkillsController::class, 'create'])->name('skill_c
 Route::get('/skills/success/', [SkillsController::class, 'success'])->name('skill_success');
 
 Route::post('/skills', [SkillsController::class, 'store'])->name('skills.store');
+
+Route::get('/skills/{slug}', [SkillsController::class, 'show'])->name('skills.show');
