@@ -7,6 +7,7 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\AboutController;
+use App\Http\Controllers\SkillsController;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
@@ -35,3 +36,11 @@ Route::get('/contact/', [ContactController::class, 'contact'])->name('contact');
 Route::post('/contact/', [ContactController::class, 'contactPost'])->name('contact.store');
 
 Route::get('/over-mij/', [AboutController::class, 'index'])->name('over-mij');
+
+Route::get('/skills/', [SkillsController::class, 'showSkills'])->name('skills');
+
+Route::get('/skills/create', [SkillsController::class, 'create'])->name('skill_create')->middleware('auth');
+
+Route::get('/skills/success/', [SkillsController::class, 'success'])->name('skill_success');
+
+Route::post('/skills', [SkillsController::class, 'store'])->name('skills.store');

@@ -3,11 +3,19 @@
 
     body.dark-theme & {
         background: var(--black-color);
+
+        .skills-item a {
+            color: var(--white-color);
+        }
     }
 }
 
-.skills-item {
+.skills-item a {
     width: fit-content;
+    display: flex;
+    align-items: center;
+    color: var(--black-color);
+    text-decoration: none;
 
     &:hover {
         cursor: pointer;
