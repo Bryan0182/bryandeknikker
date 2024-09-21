@@ -4,11 +4,14 @@
 
 @push('styles')
     <link rel="stylesheet" href="{{ asset('/output/css/header.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('/output/css/recent_cases.min.css') }}">
     <link rel="stylesheet" href="{{ asset('/output/css/cta.min.css') }}">
     <link rel="stylesheet" href="{{ asset('/output/css/footer.min.css') }}">
 @endpush
 
 @section('content')
+    @include('components.cases', ['blogs' => $blogs])
+
     @component('components.cta', [
         'title' => 'Ontdek mijn portfolio',
         'description' => 'Ontdek mijn portfolio cases en zie mijn ontwikkelvaardigheden in actie',
