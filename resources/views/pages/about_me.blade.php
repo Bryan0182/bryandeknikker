@@ -158,11 +158,11 @@
     @endcomponent
 
     @component('components.cta', [
-        'title' => 'Ontdek mijn portfolio',
-        'description' => 'Ontdek mijn portfolio cases en zie mijn ontwikkelvaardigheden in actie',
-        'first_button' => 'Cases',
-        'first_button_url' => '',
-        'second_button' => 'Bekijk mijn laatste case',
+        'title' => 'Benieuwd wat ik voor jou kan betekenen?',
+        'description' => 'Stuur me een bericht en laten we jouw ideeën tot leven brengen!',
+        'first_button' => 'Contact',
+        'first_button_url' => '/contact/',
+        'second_button' => '',
         'second_button_url' => ''
     ])
     @endcomponent
