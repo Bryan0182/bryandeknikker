@@ -1,6 +1,6 @@
 @extends('layouts.base')
 
-@section('title', 'Home')
+@section('title', 'Over mij')
 
 @push('styles')
     <link rel="stylesheet" href="{{ asset('/output/css/header.min.css') }}">
