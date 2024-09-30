@@ -111,4 +111,19 @@ class BlogController extends Controller
 
         return view('pages.cases', compact('blogs'));
     }
+
+    public function search(Request $request)
+    {
+        if($request->ajax()) {
+            $query = $request->get('search');
+
+            $cases = Blog::where('title', 'LIKE', "%{$query}%")
+                ->orWhere('intro_text', 'LIKE', "%{$query}%")
+                ->get();
+
+            $output = view('components.cases', ['blogs' => $cases])->render();
+
+            return response()->json($output);
+        }
+    }
 }

@@ -1,11 +1,9 @@
-<section class="recent-blogs py-5">
+<section class="cases py-5">
     <div class="container">
-        <h1 class="mb-4 text-center">Cases</h1>
-
         @if ($blogs->isEmpty())
             <p class="text-center">Er zijn momenteel geen cases beschikbaar.</p>
         @else
-            <div class="row justify-content-between">
+            <div class="row justify-content-between" id="case-results">
                 @foreach ($blogs as $index => $blog)
                     <div class="col-md-4 mb-4 d-flex">
                         <div class="card mx-auto @if($index == 1) centered-card @endif">

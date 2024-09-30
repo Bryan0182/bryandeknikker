@@ -4,12 +4,21 @@
 
 @push('styles')
     <link rel="stylesheet" href="{{ asset('/output/css/header.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('/output/css/text.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('/output/css/search.min.css') }}">
     <link rel="stylesheet" href="{{ asset('/output/css/recent_cases.min.css') }}">
     <link rel="stylesheet" href="{{ asset('/output/css/cta.min.css') }}">
     <link rel="stylesheet" href="{{ asset('/output/css/footer.min.css') }}">
 @endpush
 
 @section('content')
+    @component('components.text', [
+        'title' => 'Cases',
+    ])
+    @endcomponent
+
+    @include('components.search')
+
     @include('components.cases', ['blogs' => $blogs])
 
     @component('components.cta', [

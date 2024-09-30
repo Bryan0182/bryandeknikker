@@ -85,6 +85,11 @@ mix.sass('public/source/sass/experience.scss', 'public/output/css/experience.min
         processCssUrls: false
     });
 
+mix.sass('public/source/sass/search.scss', 'public/output/css/search.min.css')
+    .options({
+        processCssUrls: false
+    });
+
 mix.js('public/source/js/app.js', 'public/output/js/app.min.js');
 
 mix.copyDirectory('public/source/fonts', 'public/output/fonts');

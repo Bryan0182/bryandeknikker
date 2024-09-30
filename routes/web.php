@@ -23,6 +23,8 @@ Route::get('/recent-blogs/', [BlogController::class, 'showRecentBlogs'])->name('
 
 Route::get('/cases/{slug}/', [BlogController::class, 'show'])->name('blogs.show');
 
+Route::get('/case/search', [BlogController::class, 'search'])->name('blogs.search');
+
 Route::get('/login/', [LoginController::class, 'showLoginForm'])->name('login');
 
 Route::post('/login/', [LoginController::class, 'login']);

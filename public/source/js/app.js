@@ -69,4 +69,19 @@ $(document).ready(function () {
     document.querySelector('.navbar-toggler').addEventListener('click', function () {
         this.classList.toggle('collapsed');
     });
+
+    $(document).ready(function() {
+        $('#search').on('keyup', function() {
+            var query = $(this).val();
+            console.log(searchUrl);
+            $.ajax({
+                url: searchUrl,
+                type: "GET",
+                data: {'search': query},
+                success: function(data) {
+                    $('#case-results').html(data);
+                }
+            });
+        });
+    });
 });
