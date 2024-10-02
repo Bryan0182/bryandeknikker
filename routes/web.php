@@ -51,3 +51,5 @@ Route::post('/skills', [SkillsController::class, 'store'])->name('skills.store')
 Route::get('/skills/{slug}', [SkillsController::class, 'show'])->name('skills.show');
 
 Route::post('/newsletter-subscribe', [NewsletterSubscriptionController::class, 'store'])->name('newsletter.subscribe');
+
+Route::get('/privacyverklaring', [App\Http\Controllers\PrivacyController::class, 'show'])->name('privacyverklaring');
