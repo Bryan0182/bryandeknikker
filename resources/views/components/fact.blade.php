@@ -2,7 +2,7 @@
     <div class="container fact-container">
         <div class="row align-items-start text-center">
             <!-- Fact 1 -->
-            <div class="col-lg-4 mb-4">
+            <div class="col-lg-4 mb-5">
                 <div class="card h-100 fact-card left">
                     <div class="position-relative">
                         <div
@@ -17,7 +17,7 @@
             </div>
 
             <!-- Fact 2 -->
-            <div class="col-lg-4 mb-4">
+            <div class="col-lg-4 mb-5">
                 <div class="card h-100 fact-card middle">
                     <div class="position-relative">
                         <div
@@ -32,7 +32,7 @@
             </div>
 
             <!-- Fact 3 -->
-            <div class="col-lg-4 mb-4">
+            <div class="col-lg-4 mb-5">
                 <div class="card h-100 fact-card right">
                     <div class="position-relative">
                         <div

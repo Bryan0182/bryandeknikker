@@ -8,6 +8,7 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\SkillsController;
+use App\Http\Controllers\NewsletterSubscriptionController;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
@@ -48,3 +49,5 @@ Route::get('/skills/success/', [SkillsController::class, 'success'])->name('skil
 Route::post('/skills', [SkillsController::class, 'store'])->name('skills.store');
 
 Route::get('/skills/{slug}', [SkillsController::class, 'show'])->name('skills.show');
+
+Route::post('/newsletter-subscribe', [NewsletterSubscriptionController::class, 'store'])->name('newsletter.subscribe');

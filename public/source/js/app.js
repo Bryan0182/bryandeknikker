@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    // Initialiseer de slider
+    // Initialiseer de slider met Slick Carousel
     $('.slider-images').slick({
         autoplay: true,
         autoplaySpeed: 5000,
@@ -13,56 +13,38 @@ $(document).ready(function () {
     const iconMoon = document.getElementById('icon-moon');
 
     const applyTheme = (theme) => {
-        if (theme === 'dark') {
-            document.body.classList.add('dark-theme');
-            document.body.classList.remove('light-theme');
-            iconSun.style.display = 'block';
-            iconMoon.style.display = 'none';
+        document.body.classList.toggle('dark-theme', theme === 'dark');
+        document.body.classList.toggle('light-theme', theme === 'light');
+        iconSun.style.display = theme === 'dark' ? 'block' : 'none';
+        iconMoon.style.display = theme === 'light' ? 'block' : 'none';
+    };
+
+    const initTheme = () => {
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme) {
+            applyTheme(savedTheme);
         } else {
-            document.body.classList.add('light-theme');
-            document.body.classList.remove('dark-theme');
-            iconSun.style.display = 'none';
-            iconMoon.style.display = 'block';
+            const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            applyTheme(prefersDarkScheme ? 'dark' : 'light');
         }
     };
 
-    const savedTheme = localStorage.getItem('theme');
-    if (savedTheme) {
-        applyTheme(savedTheme);
-    } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        applyTheme('dark');
-    } else {
-        applyTheme('light');
-    }
-
-    // Schakel tussen thema's en sla de voorkeur op
-    themeSwitcher.addEventListener('click', function () {
-        if (document.body.classList.contains('dark-theme')) {
-            applyTheme('light');
-            localStorage.setItem('theme', 'light');
-        } else {
-            applyTheme('dark');
-            localStorage.setItem('theme', 'dark');
-        }
+    themeSwitcher.addEventListener('click', () => {
+        const currentTheme = document.body.classList.contains('dark-theme') ? 'light' : 'dark';
+        applyTheme(currentTheme);
+        localStorage.setItem('theme', currentTheme);
     });
 
-    // Luister naar veranderingen in systeemvoorkeuren
-    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
-        if (event.matches) {
-            applyTheme('dark');
-        } else {
-            applyTheme('light');
-        }
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (event) => {
+        applyTheme(event.matches ? 'dark' : 'light');
     });
+
+    initTheme();
 
     // Sticky header bij scrollen
-    window.addEventListener('scroll', function () {
+    window.addEventListener('scroll', () => {
         const header = document.querySelector('.header');
-        if (window.scrollY > 0) {
-            header.classList.add('is-sticky');
-        } else {
-            header.classList.remove('is-sticky');
-        }
+        header.classList.toggle('is-sticky', window.scrollY > 0);
     });
 
     // Wissel de toggler-status van de navbar
@@ -70,18 +52,53 @@ $(document).ready(function () {
         this.classList.toggle('collapsed');
     });
 
-    $(document).ready(function() {
-        $('#search').on('keyup', function() {
-            var query = $(this).val();
-            console.log(searchUrl);
+    // Zoekfunctionaliteit met AJAX
+    $('#search').on('keyup', function () {
+        const query = $(this).val();
+        if (query.length > 0) { // Voorkom onnodige verzoeken bij een lege zoekopdracht
             $.ajax({
                 url: searchUrl,
-                type: "GET",
-                data: {'search': query},
-                success: function(data) {
+                type: 'GET',
+                data: { search: query },
+                success: function (data) {
                     $('#case-results').html(data);
                 }
             });
+        } else {
+            $('#case-results').empty(); // Leeg de resultaten bij een lege zoekopdracht
+        }
+    });
+
+    // Verwerking van het nieuwsbriefformulier met AJAX
+    $('#newsletterForm').on('submit', function (e) {
+        e.preventDefault();
+
+        const messageContainer = $('#newsletter-message');
+        messageContainer.html('');  // Leeg de container bij elke nieuwe poging
+
+        $.ajax({
+            url: $(this).attr('action'),
+            method: 'POST',
+            data: $(this).serialize(),
+            success: function (response) {
+                // Toon een succesbericht
+                messageContainer.html('<div class="alert alert-success">Je bent succesvol ingeschreven voor de nieuwsbrief!</div>');
+                $('#newsletter1').val('');  // Leeg het inputveld
+
+                // Verberg het bericht na 5 seconden
+                setTimeout(function () {
+                    messageContainer.fadeOut();
+                }, 5000);
+            },
+            error: function () {
+                // Toon een foutmelding
+                messageContainer.html('<div class="alert alert-danger">Er is een fout opgetreden. Probeer het opnieuw.</div>');
+
+                // Verberg het bericht na 5 seconden
+                setTimeout(function () {
+                    messageContainer.fadeOut();
+                }, 5000);
+            }
         });
     });
 });

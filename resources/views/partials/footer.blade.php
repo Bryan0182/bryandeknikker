@@ -6,24 +6,28 @@
                     <img src="{{ asset('/output/images/BK-logo.svg') }}" class="logo-light" width="100" height="65" alt="Logo van Bryan de Knikker">
                     <img src="{{ asset('/output/images/BK-logo-white.svg') }}" class="logo-dark" width="100" height="65" alt="Logo van Bryan de Knikker">
                 </a>
-                <form autocomplete="off">
+                <form id="newsletterForm" method="POST" action="{{ route('newsletter.subscribe') }}">
+                    @csrf
                     <p>Blijf op de hoogte van nieuwe cases door je aan te melden voor mijn nieuwsbrief.</p>
                     <div class="d-flex flex-column flex-sm-row w-100 gap-2 mt-3 mb-3">
                         <label for="newsletter1" class="visually-hidden">E-mailadres</label>
-                        <input id="newsletter1" type="text" class="form-control newsletter-subscription-form" placeholder="E-mailadres">
-                        <button class="btn btn-primary newsletter-subscription-button" type="button">Abonneren</button>
+                        <input id="newsletter1" name="email" type="email" class="form-control newsletter-subscription-form" placeholder="E-mailadres" required>
+                        <button class="btn btn-primary newsletter-subscription-button" type="submit">Abonneren</button>
                     </div>
                     <span>Door te abonneren, ga je akkoord met ons privacybeleid en geef je toestemming om updates van mij te ontvangen.</span>
+
+                    <!-- Container voor bevestigingsbericht -->
+                    <div id="newsletter-message" class="mt-3"></div>
                 </form>
             </div>
 
             <div class="col-12 col-md-3 offset-md-2 mb-3">
                 <h5 class="mb-2 mb-md-5">Heb je dit al gezien?</h5>
                 <ul class="nav flex-column">
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Over mij</a></li>
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Skills</a></li>
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Cases</a></li>
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Contact</a></li>
+                    <li class="nav-item mb-2"><a href="{{ route('over-mij') }}" class="nav-link p-0 text-body-secondary">Over mij</a></li>
+                    <li class="nav-item mb-2"><a href="{{ route('skills') }}" class="nav-link p-0 text-body-secondary">Skills</a></li>
+                    <li class="nav-item mb-2"><a href="{{ route('cases') }}" class="nav-link p-0 text-body-secondary">Cases</a></li>
+                    <li class="nav-item mb-2"><a href="{{ route('contact') }}" class="nav-link p-0 text-body-secondary">Contact</a></li>
                 </ul>
             </div>
 
