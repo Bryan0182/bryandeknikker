@@ -1,4 +1,4 @@
-<div class="container px-4 py-5">
+<div class="container features-container px-4 py-5">
     <div class="row row-cols-1 row-cols-md-2 align-items-md-center g-5">
         <div class="col d-flex flex-column gap-2">
             <h2 class="text-center text-lg-start">{{ $title }}</h2>

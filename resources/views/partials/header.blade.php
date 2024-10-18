@@ -17,7 +17,20 @@
                     <li class="nav-item nav-item-header align-items-center d-flex">
                         <a href="{{ route('skills') }}" class="nav-link">Skills</a>
                     </li>
+                    <li class="nav-item nav-item-header dropdown align-items-center d-sm-flex d-md-block">
+                        <a href="{{ route('diensten') }}" class="nav-link dropdown-switch" id="servicesDropdown" role="button" aria-expanded="false">
+                            Diensten
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+                            <li><a class="dropdown-item" href="{{ route('diensten.web') }}">Website laten maken</a></li>
+                            <li><a class="dropdown-item" href="{{ route('diensten.seo') }}">SEO werkzaamheden</a></li>
+                            <li><a class="dropdown-item" href="{{ route('diensten.social') }}">Social werkzaamheden</a></li>
+                            <li><a class="dropdown-item" href="{{ route('diensten.design') }}">Design laten maken</a></li>
+                            <li><a class="dropdown-item" href="{{ route('diensten.app') }}">Applicatie laten maken</a></li>
+                        </ul>
+                    </li>
                 </ul>
+
                 <div class="d-flex flex-column flex-lg-row buttons-row">
                     <a href="{{ route('cases') }}" type="button" class="btn btn-outline-dark cases-header-button me-0 me-lg-2 mb-2 mb-lg-0">
                         Cases

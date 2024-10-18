@@ -24,10 +24,10 @@
             <div class="col-12 col-md-3 offset-md-2 mb-3">
                 <h5 class="mb-2 mb-md-5">Heb je dit al gezien?</h5>
                 <ul class="nav flex-column">
-                    <li class="nav-item mb-2"><a href="{{ route('over-mij') }}" class="nav-link p-0 text-body-secondary">Over mij</a></li>
-                    <li class="nav-item mb-2"><a href="{{ route('skills') }}" class="nav-link p-0 text-body-secondary">Skills</a></li>
-                    <li class="nav-item mb-2"><a href="{{ route('cases') }}" class="nav-link p-0 text-body-secondary">Cases</a></li>
-                    <li class="nav-item mb-2"><a href="{{ route('contact') }}" class="nav-link p-0 text-body-secondary">Contact</a></li>
+                    <li class="nav-item mb-2"><a href="{{ route('over-mij') }}" class="nav-link nav-link-footer p-0 text-body-secondary">Over mij</a></li>
+                    <li class="nav-item mb-2"><a href="{{ route('skills') }}" class="nav-link nav-link-footer p-0 text-body-secondary">Skills</a></li>
+                    <li class="nav-item mb-2"><a href="{{ route('cases') }}" class="nav-link nav-link-footer p-0 text-body-secondary">Cases</a></li>
+                    <li class="nav-item mb-2"><a href="{{ route('contact') }}" class="nav-link nav-link-footer p-0 text-body-secondary">Contact</a></li>
                 </ul>
             </div>
 
@@ -35,7 +35,7 @@
                 <h5 class="mb-2 mb-md-5">Volg mij</h5>
                 <ul class="nav flex-column">
                     <li class="nav-item mb-2">
-                        <a href="https://www.linkedin.com/in/bryan-de-knikker/" class="nav-link p-0 text-body-secondary" target="_blank">
+                        <a href="https://www.linkedin.com/in/bryan-de-knikker/" class="nav-link nav-link-footer p-0 text-body-secondary" target="_blank">
                             <img src="/output/images/linkedin-logo.svg" alt="LinkedIn Logo" style="width: 16px; height: 16px; margin-right: 5px;">
                             LinkedIn
                         </a>

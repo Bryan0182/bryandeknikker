@@ -90,6 +90,11 @@ mix.sass('public/source/sass/search.scss', 'public/output/css/search.min.css')
         processCssUrls: false
     });
 
+mix.sass('public/source/sass/services.scss', 'public/output/css/services.min.css')
+    .options({
+        processCssUrls: false
+    });
+
 mix.js('public/source/js/app.js', 'public/output/js/app.min.js');
 
 mix.copyDirectory('public/source/fonts', 'public/output/fonts');

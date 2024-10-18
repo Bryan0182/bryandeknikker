@@ -7,6 +7,36 @@ $(document).ready(function () {
         arrows: true,
     });
 
+    // Functie om te schakelen naar de donkere afbeeldingen
+    function switchToDarkImages() {
+        document.querySelectorAll('.theme-image').forEach(function (img) {
+            const darkSrc = img.getAttribute('data-dark-src');
+            if (darkSrc) {
+                img.setAttribute('src', darkSrc);
+            }
+        });
+    }
+
+    // Functie om terug te schakelen naar de lichte afbeeldingen
+    function switchToLightImages() {
+        document.querySelectorAll('.theme-image').forEach(function (img) {
+            const lightSrc = img.getAttribute('data-light-src');
+            if (lightSrc) {
+                img.setAttribute('src', lightSrc);
+            }
+        });
+    }
+
+    // Initialiseer thema afbeeldingen door `data-light-src` op te slaan
+    function initializeImages() {
+        document.querySelectorAll('.theme-image').forEach(function (img) {
+            const currentSrc = img.getAttribute('src');
+            if (!img.getAttribute('data-light-src')) {
+                img.setAttribute('data-light-src', currentSrc);
+            }
+        });
+    }
+
     // Thema-instellingen op basis van opgeslagen voorkeuren
     const themeSwitcher = document.getElementById('theme-switcher');
     const iconSun = document.getElementById('icon-sun');
@@ -17,6 +47,13 @@ $(document).ready(function () {
         document.body.classList.toggle('light-theme', theme === 'light');
         iconSun.style.display = theme === 'dark' ? 'block' : 'none';
         iconMoon.style.display = theme === 'light' ? 'block' : 'none';
+
+        // Wissel de afbeeldingen op basis van het actieve thema
+        if (theme === 'dark') {
+            switchToDarkImages();
+        } else {
+            switchToLightImages();
+        }
     };
 
     const initTheme = () => {
@@ -39,6 +76,8 @@ $(document).ready(function () {
         applyTheme(event.matches ? 'dark' : 'light');
     });
 
+    // Initialiseer de lichte afbeeldingen bij het laden van de pagina
+    initializeImages();
     initTheme();
 
     // Sticky header bij scrollen
@@ -55,7 +94,7 @@ $(document).ready(function () {
     // Zoekfunctionaliteit met AJAX
     $('#search').on('keyup', function () {
         const query = $(this).val();
-        if (query.length > 0) { // Voorkom onnodige verzoeken bij een lege zoekopdracht
+        if (query.length > 0) {
             $.ajax({
                 url: searchUrl,
                 type: 'GET',
@@ -65,7 +104,7 @@ $(document).ready(function () {
                 }
             });
         } else {
-            $('#case-results').empty(); // Leeg de resultaten bij een lege zoekopdracht
+            $('#case-results').empty();
         }
     });
 
@@ -74,31 +113,50 @@ $(document).ready(function () {
         e.preventDefault();
 
         const messageContainer = $('#newsletter-message');
-        messageContainer.html('');  // Leeg de container bij elke nieuwe poging
+        messageContainer.html('');
 
         $.ajax({
             url: $(this).attr('action'),
             method: 'POST',
             data: $(this).serialize(),
             success: function (response) {
-                // Toon een succesbericht
                 messageContainer.html('<div class="alert alert-success">Je bent succesvol ingeschreven voor de nieuwsbrief!</div>');
-                $('#newsletter1').val('');  // Leeg het inputveld
+                $('#newsletter1').val('');
 
-                // Verberg het bericht na 5 seconden
                 setTimeout(function () {
                     messageContainer.fadeOut();
                 }, 5000);
             },
             error: function () {
-                // Toon een foutmelding
                 messageContainer.html('<div class="alert alert-danger">Er is een fout opgetreden. Probeer het opnieuw.</div>');
 
-                // Verberg het bericht na 5 seconden
                 setTimeout(function () {
                     messageContainer.fadeOut();
                 }, 5000);
             }
         });
+    });
+
+    // Dropdown functionaliteit voor mobiel
+    const dropdownSwitch = document.querySelector('.dropdown-switch');
+    const dropdownMenu = document.querySelector('.dropdown-menu');
+
+    dropdownSwitch.addEventListener('click', function (e) {
+        const isMobile = window.innerWidth <= 991;
+        const isOpen = dropdownMenu.classList.contains('show');
+
+        if (isMobile) {
+            e.preventDefault();
+            dropdownMenu.classList.toggle('show');
+        } else if (isOpen) {
+            window.location.href = this.getAttribute('href');
+        }
+    });
+
+    // Sluit het dropdown-menu als je buiten het menu klikt
+    document.addEventListener('click', function (event) {
+        if (!dropdownSwitch.contains(event.target) && !dropdownMenu.contains(event.target)) {
+            dropdownMenu.classList.remove('show');
+        }
     });
 });
