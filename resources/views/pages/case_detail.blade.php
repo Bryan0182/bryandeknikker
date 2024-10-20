@@ -59,8 +59,8 @@
         @endcomponent
 
         @component('components.text', [
-            'title' => $blog->approach_title,
-            'description' => $blog->approach_description
+            'title' => $blog->results_title,
+            'description' => $blog->results_description
         ])
         @endcomponent
 
