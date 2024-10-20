@@ -44,6 +44,8 @@
                     <th>Website URL</th>
                     <th>Aangemaakt op</th>
                     <th>Laatst geüpdatet op</th>
+                    <th>Aanpassen</th>
+                    <th>Verwijderen</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -54,6 +56,20 @@
                         <td><a href="{{ $blog->website_url }}" target="_blank">{{ $blog->website_url }}</a></td>
                         <td>{{ $blog->created_at->format('d-m-Y H:i') }}</td>
                         <td>{{ $blog->updated_at->format('d-m-Y H:i') }}</td>
+
+                        <!-- Pas aan knop -->
+                        <td>
+                            <a href="{{ route('pages.case_edit', $blog->id) }}" class="update-button">Pas {{ $blog->title }} aan</a>
+                        </td>
+
+                        <!-- Verwijder knop -->
+                        <td>
+                            <form action="{{ route('pages.case_destroy', $blog->id) }}" method="POST" onsubmit="return confirm('Weet je zeker dat je deze blog wilt verwijderen?');">
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit" class="delete-button">Verwijder {{ $blog->title }}</button>
+                            </form>
+                        </td>
                     </tr>
                 @endforeach
                 </tbody>

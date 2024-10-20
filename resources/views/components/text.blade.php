@@ -1,6 +1,6 @@
 <div class="container text-section">
-    <div class="row text-center py-5">
-        <div class="col-12">
+    <div class="row justify-content-center py-5">
+        <div class="col-8">
             @if(!empty($title))
                 <h2>{{ $title }}</h2>
             @endif

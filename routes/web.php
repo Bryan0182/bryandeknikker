@@ -17,6 +17,12 @@ Route::get('/cases/create/', [BlogController::class, 'create'])->name('blogs.cre
 
 Route::get('/cases/success/', [BlogController::class, 'success'])->name('pages.case_success');
 
+Route::get('/cases/edit/{blog}', [BlogController::class, 'edit'])->name('pages.case_edit');
+
+Route::delete('/cases/{blog}', [BlogController::class, 'destroy'])->name('pages.case_destroy');
+
+Route::put('/cases/update/{blog}', [BlogController::class, 'update'])->name('pages.case_update');
+
 Route::post('/cases/', [BlogController::class, 'store'])->name('blogs.store');
 
 Route::get('/cases/', [BlogController::class, 'index'])->name('cases');

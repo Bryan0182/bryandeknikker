@@ -6,12 +6,53 @@ body.dark-theme {
 
     .dashboard-table {
         th {
-            background: transparent;
+            background: var(--black-color);
             color: var(--white-color);
+        }
+
+        td {
+            background: var(--black-color);
+            color: var(--white-color);
+
+            .update-button, .delete-button {
+                color: var(--white-color);
+
+                &:hover {
+                    color: var(--main-color);
+                }
+            }
         }
     }
 }
 
 .dashboard-card {
     background: transparent;
+}
+
+.dashboard-table {
+    th {
+        background: var(--white-color);
+        color: var(--black-color);
+    }
+
+    td {
+        background: var(--white-color);
+        color: var(--black-color);
+    }
+}
+
+.update-button, .delete-button {
+    color: var(--black-color);
+    text-decoration: underline var(--main-color);
+    transition: ease-in-out 0.4s;
+
+    &:hover {
+        color: var(--main-color);
+    }
+}
+
+.delete-button {
+    background: none;
+    border: none;
+    padding: 0;
 }

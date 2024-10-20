@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Blog;
+
 use Illuminate\Http\Request;
 
 class ServicesController extends Controller
@@ -19,7 +21,9 @@ class ServicesController extends Controller
      */
     public function showWebsiteService()
     {
-        return view('pages.services-web');
+        $recentBlogs = Blog::orderBy('created_at', 'desc')->limit(3)->get();
+
+        return view('pages.services-web', compact('recentBlogs'));
     }
 
     /**

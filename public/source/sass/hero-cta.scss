@@ -1,0 +1,94 @@
+/* Start hero CTA SCSS */
+
+.hero-cta-row {
+    margin: 0;
+    padding: 6rem 0 3rem 0;
+
+    .contact-card {
+        box-shadow:
+            2px 2px 8px rgba(0, 0, 0, 0.1),  /* Rechteronder */
+            -2px 2px 8px rgba(0, 0, 0, 0.1), /* Linkeronder */
+            2px -2px 8px rgba(0, 0, 0, 0.08), /* Rechterboven */
+            -2px -2px 8px rgba(0, 0, 0, 0.08); /* Linkerboven */
+        padding: 30px;
+        border-radius: 5px;
+
+        body.dark-theme & {
+            box-shadow:
+                2px 2px 8px rgba(255, 255, 255, 0.1),
+                -2px 2px 8px rgba(255, 255, 255, 0.1),
+                2px -2px 8px rgba(255, 255, 255, 0.08),
+                -2px -2px 8px rgba(255, 255, 255, 0.08);
+        }
+    }
+
+    @media (max-width: 991px) {
+        padding: 3rem 0;
+
+        .image-column {
+            margin-top: 3rem;
+        }
+    }
+}
+
+.description-paragraph {
+    padding: 30px 0;
+}
+
+.mail-contact-hero-button {
+    background-color: var(--transparent-color);
+    color: var(--main-color);
+    border: 1px solid var(--main-color);
+    padding: 6px 12px !important;
+    border-radius: 5px;
+    transition: ease-in-out 0.4s;
+
+    &:hover,
+    &:focus,
+    &:active {
+        background-color: var(--main-color) !important;
+        color: var(--white-color) !important;
+        border: 1px solid var(--main-color) !important;
+    }
+}
+
+.phone-contact-hero-button {
+    background-color: var(--transparent-color);
+    color: var(--main-color);
+    border: none;
+    padding: 6px 12px !important;
+    transition: ease-in-out 0.4s;
+    position: relative;
+
+    &:hover,
+    &:focus,
+    &:active {
+        background-color: var(--transparent-color) !important;
+        color: var(--main-color) !important;
+    }
+
+    &::after {
+        content: '';
+        background: url('/output/images/angle-right.svg') no-repeat;
+        width: 15px;
+        height: 24px;
+        display: inline-block;
+        margin-left: 5px;
+        transition: transform 0.4s ease-in-out;
+        top: 6px;
+        position: absolute;
+    }
+
+    &:hover::after {
+        transform: translateX(8px);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .button-hero-cta-row {
+        display: flex !important;
+        width: fit-content;
+    }
+}
+
+/* End hero CTA SCSS */

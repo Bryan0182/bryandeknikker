@@ -11,10 +11,10 @@
                     <p>Blijf op de hoogte van nieuwe cases door je aan te melden voor mijn nieuwsbrief.</p>
                     <div class="d-flex flex-column flex-sm-row w-100 gap-2 mt-3 mb-3">
                         <label for="newsletter1" class="visually-hidden">E-mailadres</label>
-                        <input id="newsletter1" name="email" type="email" class="form-control newsletter-subscription-form" placeholder="E-mailadres" required>
+                        <input id="newsletter1" name="email" type="email" class="form-control newsletter-subscription-form" placeholder="E-mailadres" autocomplete="email" required>
                         <button class="btn btn-primary newsletter-subscription-button" type="submit">Abonneren</button>
                     </div>
-                    <span>Door te abonneren, ga je akkoord met ons privacybeleid en geef je toestemming om updates van mij te ontvangen.</span>
+                    <span class="disclaimer">Door te abonneren, ga je akkoord met ons privacybeleid en geef je toestemming om updates van mij te ontvangen.</span>
 
                     <!-- Container voor bevestigingsbericht -->
                     <div id="newsletter-message" class="mt-3"></div>

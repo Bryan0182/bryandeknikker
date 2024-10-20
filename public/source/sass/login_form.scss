@@ -14,6 +14,8 @@ body.dark-theme {
 .login-form {
     input {
         border: 1px solid var(--main-color) !important;
+        background: var(--white-color);
+
         &:focus {
             border-color: var(--main-color) !important;
             box-shadow: none;
