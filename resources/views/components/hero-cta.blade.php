@@ -20,12 +20,16 @@
                 <h4 class="mb-4 text-center">Vrijblijvend contact opnemen?</h4>
                 <p class="text-center">Wil je meer weten over hoe ik je kan helpen? Neem dan gerust contact op voor een vrijblijvend gesprek.</p>
 
-                <div class="cta-buttons mt-2 d-flex justify-content-center gap-2">
+                <!-- Flex-column for small screens and flex-md-row for medium+ screens -->
+                <div class="cta-buttons mt-2 d-flex flex-column flex-md-row justify-content-center gap-2">
                     @if (!empty($mail_button))
-                        <a href="mailto:{{ $mail_button }}" class="btn btn-primary mail-contact-hero-button">{{ $mail_button }}</a>
+                        <a href="mailto:{{ $mail_button }}"
+                           class="btn btn-primary mail-contact-hero-button mx-auto"
+                           style="width: fit-content;">{{ $mail_button }}</a>
                     @endif
                     @if (!empty($phone_button) && !empty($phone_button_url))
-                        <a href="tel:{{ $phone_button_url }}" class="btn btn-outline-secondary phone-contact-hero-button">{{ $phone_button }}</a>
+                        <a href="tel:{{ $phone_button_url }}"
+                           class="btn btn-outline-secondary phone-contact-hero-button">{{ $phone_button }}</a>
                     @endif
                 </div>
             </div>

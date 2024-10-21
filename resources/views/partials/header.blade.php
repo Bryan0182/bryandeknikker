@@ -18,10 +18,14 @@
                         <a href="{{ route('skills') }}" class="nav-link">Skills</a>
                     </li>
                     <li class="nav-item nav-item-header dropdown align-items-center d-sm-flex d-md-block">
-                        <a href="{{ route('diensten') }}" class="nav-link dropdown-switch" id="servicesDropdown" role="button" aria-expanded="false">
+                        <a href="{{ route('diensten') }}" class="nav-link dropdown-switch" id="servicesDropdown" role="button" aria-expanded="false" data-toggle="dropdown">
                             Diensten
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+                            <!-- Nieuw item voor Diensten, alleen zichtbaar op mobiel -->
+                            <li class="d-lg-none">
+                                <a class="dropdown-item" href="{{ route('diensten') }}">Alle Diensten</a>
+                            </li>
                             <li><a class="dropdown-item" href="{{ route('diensten.web') }}">Website laten maken</a></li>
                             <li><a class="dropdown-item" href="{{ route('diensten.seo') }}">SEO werkzaamheden</a></li>
                             <li><a class="dropdown-item" href="{{ route('diensten.social') }}">Social werkzaamheden</a></li>

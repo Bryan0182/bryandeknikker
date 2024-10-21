@@ -62,12 +62,11 @@
     @endcomponent
 
     @include('components.recent_cases', ['recentBlogs' => $recentBlogs])
-
     @component('components.cta', [
-        'title' => 'Benieuwd wat ik voor jou kan betekenen?',
-        'description' => 'Stuur me een bericht en laten we jouw ideeën tot leven brengen!',
-        'first_button' => 'Contact',
-        'first_button_url' => '',
+        'title' => 'Klaar om jouw website tot leven te brengen?',
+        'description' => 'Ik help je graag met het ontwikkelen van een professionele, op maat gemaakte website die perfect aansluit bij jouw doelen. Neem contact met me op en ontdek hoe we jouw project kunnen realiseren!',
+        'first_button' => 'Start jouw project',
+        'first_button_url' => route('contact'),
         'second_button' => '',
         'second_button_url' => ''
     ])

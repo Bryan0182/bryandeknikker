@@ -46,11 +46,11 @@ body.dark-theme {
         border-color: var(--white-color);
     }
 
-    .navbar-toggler-icon {
+    .navbar-toggler.collapsed .navbar-toggler-icon {
         background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 0.75)' stroke-width='2' d='M4 7h22M4 15h22M4 23h22' /%3E%3C/svg%3E");
     }
 
-    .navbar-toggler.collapsed .navbar-toggler-icon {
+    .navbar-toggler-icon {
         background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='30' height='30'%3E%3Cpath stroke='rgba(255, 255, 255, 0.75)' stroke-width='2' d='M3 3L21 21M21 3L3 21' /%3E%3C/svg%3E");
     }
 
@@ -211,12 +211,13 @@ body.dark-theme {
 .navbar-toggler {
     border-color: var(--black-color);
 
-    &-icon {
+    // Hamburger-menu tonen als het menu is ingeklapt (collapsed)
+    &.collapsed .navbar-toggler-icon {
         background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 0, 0, 0.5)' stroke-width='2' d='M4 7h22M4 15h22M4 23h22' /%3E%3C/svg%3E");
-        transition: background-image 0.3s;
     }
 
-    &.collapsed &-icon {
+    // Kruis tonen als het menu is geopend (niet collapsed)
+    .navbar-toggler-icon {
         background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='30' height='30'%3E%3Cpath stroke='rgba(0, 0, 0, 0.5)' stroke-width='2' d='M3 3L21 21M21 3L3 21' /%3E%3C/svg%3E");
     }
 

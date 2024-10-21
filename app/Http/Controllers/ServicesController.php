@@ -31,7 +31,9 @@ class ServicesController extends Controller
      */
     public function showAppService()
     {
-        return view('pages.services-app');
+        $recentBlogs = Blog::orderBy('created_at', 'desc')->limit(3)->get();
+
+        return view('pages.services-app', compact('recentBlogs'));
     }
 
     /**
@@ -39,7 +41,9 @@ class ServicesController extends Controller
      */
     public function showDesignService()
     {
-        return view('pages.services-design');
+        $recentBlogs = Blog::orderBy('created_at', 'desc')->limit(3)->get();
+
+        return view('pages.services-design', compact('recentBlogs'));
     }
 
     /**
@@ -47,7 +51,9 @@ class ServicesController extends Controller
      */
     public function showSeoService()
     {
-        return view('pages.services-seo');
+        $recentBlogs = Blog::orderBy('created_at', 'desc')->limit(3)->get();
+
+        return view('pages.services-seo', compact('recentBlogs'));
     }
 
     /**
@@ -55,6 +61,8 @@ class ServicesController extends Controller
      */
     public function showSocialService()
     {
-        return view('pages.services-social');
+        $recentBlogs = Blog::orderBy('created_at', 'desc')->limit(3)->get();
+
+        return view('pages.services-social', compact('recentBlogs'));
     }
 }
