@@ -21,11 +21,10 @@
                 <p class="text-center">Wil je meer weten over hoe ik je kan helpen? Neem dan gerust contact op voor een vrijblijvend gesprek.</p>
 
                 <!-- Flex-column for small screens and flex-md-row for medium+ screens -->
-                <div class="cta-buttons mt-2 d-flex flex-column flex-md-row justify-content-center gap-2">
+                <div class="cta-buttons mt-2 d-flex flex-column flex-md-row justify-content-center align-items-center gap-2">
                     @if (!empty($mail_button))
                         <a href="mailto:{{ $mail_button }}"
-                           class="btn btn-primary mail-contact-hero-button mx-auto"
-                           style="width: fit-content;">{{ $mail_button }}</a>
+                           class="btn btn-primary mail-contact-hero-button">{{ $mail_button }}</a>
                     @endif
                     @if (!empty($phone_button) && !empty($phone_button_url))
                         <a href="tel:{{ $phone_button_url }}"
