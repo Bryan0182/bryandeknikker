@@ -100,6 +100,11 @@ mix.sass('public/source/sass/hero-cta.scss', 'public/output/css/hero-cta.min.css
         processCssUrls: false
     });
 
+mix.sass('public/source/sass/faq.scss', 'public/output/css/faq.min.css')
+    .options({
+        processCssUrls: false
+    });
+
 mix.js('public/source/js/app.js', 'public/output/js/app.min.js');
 
 mix.copyDirectory('public/source/fonts', 'public/output/fonts');

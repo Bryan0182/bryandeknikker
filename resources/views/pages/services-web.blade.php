@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="{{ asset('/output/css/header.min.css') }}">
     <link rel="stylesheet" href="{{ asset('/output/css/hero-cta.min.css') }}">
     <link rel="stylesheet" href="{{ asset('/output/css/text.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('/output/css/faq.min.css') }}">
     <link rel="stylesheet" href="{{ asset('/output/css/recent_cases.min.css') }}">
     <link rel="stylesheet" href="{{ asset('/output/css/cta.min.css') }}">
     <link rel="stylesheet" href="{{ asset('/output/css/footer.min.css') }}">
@@ -61,7 +62,28 @@
     ])
     @endcomponent
 
+    @component('components.faq', [
+        'title' => 'Veelgestelde vragen',
+        'description' => 'Lees hieronder de antwoorden op veelgestelde vragen over het laten maken van een website.',
+        'accordionItems' => [
+            [
+                'title' => 'Wat kost het laten maken van een website?',
+                'description' => 'De kosten voor het laten maken van een website zijn afhankelijk van verschillende factoren, zoals de complexiteit van het ontwerp, de functionaliteiten die je nodig hebt en de hoeveelheid maatwerk. Ik maak graag een offerte op maat voor jouw project, zodat je precies weet waar je aan toe bent.'
+            ],
+            [
+                'title' => 'Project 2',
+                'description' => 'Beschrijving van project 2.'
+            ],
+            [
+                'title' => 'Project 3',
+                'description' => 'Beschrijving van project 3.'
+            ]
+        ]
+    ])
+    @endcomponent
+
     @include('components.recent_cases', ['recentBlogs' => $recentBlogs])
+
     @component('components.cta', [
         'title' => 'Klaar om jouw website tot leven te brengen?',
         'description' => 'Ik help je graag met het ontwikkelen van een professionele, op maat gemaakte website die perfect aansluit bij jouw doelen. Neem contact met me op en ontdek hoe we jouw project kunnen realiseren!',

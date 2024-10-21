@@ -1,0 +1,58 @@
+body.dark-theme {
+    .accordion-button, .accordion-body {
+        background: var(--black-color);
+        color: var(--white-color);
+    }
+
+    .accordion-button {
+        &:not(.collapsed) {
+            background: var(--main-color);
+            color: var(--black-color);
+        }
+
+        &::after {
+            content: '';
+            background-size: contain;
+            background-image: url('/output/images/angle-down.svg');
+            height: 16px;
+            margin-left: auto;
+            width: 14px;
+            transition: transform 0.3s ease;
+        }
+
+        &:not(.collapsed)::after {
+            background-image: url('/output/images/angle-up-black.svg');
+            transform: rotate(360deg);
+        }
+    }
+}
+
+.text-paragraph {
+    padding: 15px 0;
+}
+
+.accordion-button {
+    &:focus {
+        box-shadow: none;
+    }
+
+    &:not(.collapsed) {
+        background: var(--main-color);
+        color: var(--white-color);
+    }
+
+    &::after {
+        content: '';
+        background-size: contain;
+        background-image: url('/output/images/angle-down.svg');
+        height: 16px;
+        margin-left: auto;
+        width: 14px;
+        transition: transform 0.3s ease;
+    }
+
+    &:not(.collapsed)::after {
+        background-image: url('/output/images/angle-up-white.svg');
+        transform: rotate(360deg);
+    }
+}
