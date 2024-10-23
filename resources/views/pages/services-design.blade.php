@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="{{ asset('/output/css/header.min.css') }}">
     <link rel="stylesheet" href="{{ asset('/output/css/hero-cta.min.css') }}">
     <link rel="stylesheet" href="{{ asset('/output/css/text.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('/output/css/faq.min.css') }}">
     <link rel="stylesheet" href="{{ asset('/output/css/recent_cases.min.css') }}">
     <link rel="stylesheet" href="{{ asset('/output/css/cta.min.css') }}">
     <link rel="stylesheet" href="{{ asset('/output/css/footer.min.css') }}">
@@ -54,6 +55,26 @@
         <li><strong>Revisiemogelijkheden:</strong> Ik zorg dat het ontwerp precies aan jouw wensen voldoet met uitgebreide revisiemogelijkheden.</li>
         <li><strong>Snelle levertijden:</strong> Ik werk efficiënt om jouw deadlines te halen zonder in te leveren op kwaliteit.</li>
     </ul>',
+    ])
+    @endcomponent
+
+    @component('components.faq', [
+        'title' => 'Veelgestelde vragen',
+        'description' => 'Lees hieronder de antwoorden op veelgestelde vragen over het laten maken van een design.',
+        'accordionItems' => [
+            [
+                'title' => 'Wat kost het om een logo of huisstijl te laten ontwerpen?',
+                'description' => 'De kosten voor een logo of huisstijl variëren afhankelijk van de complexiteit en je wensen. Een eenvoudig logo kan vanaf €250 worden ontworpen, terwijl een volledige huisstijl inclusief branding meer kan kosten. Neem contact op voor een offerte.'
+            ],
+            [
+                'title' => 'Kan ik mijn bestaande huisstijl laten aanpassen?',
+                'description' => 'Ja, ik kan je bestaande huisstijl moderniseren of aanpassen zodat deze weer helemaal bij de huidige trends en je bedrijfsidentiteit past. We bespreken samen je wensen en voeren de nodige updates uit.'
+            ],
+            [
+                'title' => 'Wat is het belang van een professioneel ontwerp voor mijn bedrijf?',
+                'description' => 'Een professioneel ontwerp zorgt voor een sterke eerste indruk, betrouwbaarheid en herkenbaarheid. Een consistent ontwerp door al je marketingkanalen heen zorgt ervoor dat je merk sterker overkomt en potentiële klanten je beter onthouden.'
+            ]
+        ]
     ])
     @endcomponent
 

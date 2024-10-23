@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="{{ asset('/output/css/header.min.css') }}">
     <link rel="stylesheet" href="{{ asset('/output/css/hero-cta.min.css') }}">
     <link rel="stylesheet" href="{{ asset('/output/css/text.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('/output/css/faq.min.css') }}">
     <link rel="stylesheet" href="{{ asset('/output/css/recent_cases.min.css') }}">
     <link rel="stylesheet" href="{{ asset('/output/css/cta.min.css') }}">
     <link rel="stylesheet" href="{{ asset('/output/css/footer.min.css') }}">
@@ -54,6 +55,26 @@
         <li><strong>Gebruiksvriendelijke interface:</strong> Ik zorg ervoor dat de applicatie intuïtief is en makkelijk te gebruiken.</li>
         <li><strong>Ondersteuning na oplevering:</strong> Ik blijf beschikbaar voor ondersteuning en eventuele aanpassingen na de oplevering.</li>
     </ul>',
+    ])
+    @endcomponent
+
+    @component('components.faq', [
+        'title' => 'Veelgestelde vragen',
+        'description' => 'Lees hieronder de antwoorden op veelgestelde vragen over het laten maken van een applicatie.',
+        'accordionItems' => [
+            [
+                'title' => 'Hoe verloopt het proces van het laten maken van een applicatie?',
+                'description' => 'Het proces van het laten maken van een applicatie begint met een kennismaking waarin we jouw wensen en doelen bespreken. Vervolgens ontwerp ik een functioneel plan en een prototype. Na jouw goedkeuring start ik met de ontwikkeling, waarbij ik regelmatig updates geef. Tot slot wordt de applicatie grondig getest en opgeleverd, en bied ik ondersteuning na de lancering om ervoor te zorgen dat alles soepel verloopt.'
+            ],
+            [
+                'title' => 'Welke programmeertalen gebruik je voor het maken van applicaties?',
+                'description' => 'Voor eenvoudige applicaties maak ik vaak gebruik van talen zoals Python, JavaScript of PHP, afhankelijk van de eisen van het project. Deze talen zijn flexibel, schaalbaar en ideaal voor het ontwikkelen van gebruiksvriendelijke toepassingen.'
+            ],
+            [
+                'title' => 'Kan je mijn applicatie later uitbreiden met meer functies?',
+                'description' => 'Ja, de meeste applicaties die ik ontwikkel zijn modulair en schaalbaar. Dit betekent dat ik later altijd nieuwe functies kunt toevoegen of bestaande functies kunt aanpassen, zodat je applicatie blijft voldoen aan de groeiende eisen van je bedrijf.'
+            ]
+        ]
     ])
     @endcomponent
 

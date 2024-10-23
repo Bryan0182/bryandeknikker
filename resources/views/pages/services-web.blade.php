@@ -71,12 +71,12 @@
                 'description' => 'De kosten voor het laten maken van een website zijn afhankelijk van verschillende factoren, zoals de complexiteit van het ontwerp, de functionaliteiten die je nodig hebt en de hoeveelheid maatwerk. Ik maak graag een offerte op maat voor jouw project, zodat je precies weet waar je aan toe bent.'
             ],
             [
-                'title' => 'Project 2',
-                'description' => 'Beschrijving van project 2.'
+                'title' => 'Hoe lang duurt het om een website te laten maken?',
+                'description' => 'De duur van het maken van een website hangt af van de omvang en de specificaties. Een eenvoudige website kan binnen 2 tot 4 weken opgeleverd worden, terwijl complexe websites meer tijd nodig hebben. Samen bespreken we de planning en deadlines.'
             ],
             [
-                'title' => 'Project 3',
-                'description' => 'Beschrijving van project 3.'
+                'title' => 'Wordt mijn website goed vindbaar in Google?',
+                'description' => 'Ja, elke website die ik maak is geoptimaliseerd voor zoekmachines (SEO). Dit betekent dat de website voldoet aan de technische en inhoudelijke eisen van Google, zoals snelle laadtijden, mobielvriendelijkheid, en het gebruik van relevante zoekwoorden. Hierdoor heeft je website een goede basis om hoog te scoren in de zoekresultaten.'
             ]
         ]
     ])
